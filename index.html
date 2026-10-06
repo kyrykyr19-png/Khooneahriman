@@ -15,10 +15,16 @@
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .smooth-pulse {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .smooth-pulse:hover {
-  transform: scale(1.015);
+  transform: scale(1.02);
+}
+
+/* Scanline and holographic effects */
+.scanline-grid {
+  background-size: 100% 4px;
+  background-image: linear-gradient(rgba(255, 42, 141, 0.05) 1px, transparent 1px);
 }
 
 /* RTL and Persian Font overrides when active */
@@ -44,7 +50,7 @@ html[dir="rtl"] .font-body-lg,
 html[dir="rtl"] .font-body-sm {
   font-family: 'Vazirmatn', sans-serif !important;
 }
-</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#d0c5af", "primary": "#f2ca50", "surface-bright": "#3b3841", "error": "#ffb4ab", "on-error-container": "#ffdad6", "surface-container-low": "#1c1a23", "on-secondary": "#68001a", "surface-container-highest": "#36333c", "surface-container-lowest": "#0f0d15", "inverse-on-surface": "#322f38", "error-container": "#93000a", "surface-container-high": "#2b2931", "on-primary-container": "#554300", "inverse-surface": "#e6e0ec", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-container": "#d4af37", "on-primary": "#3c2f00", "primary-fixed": "#ffe088", "background": "#14121a", "on-tertiary-container": "#005035", "surface-tint": "#e9c349", "secondary-fixed": "#ffdada", "on-tertiary-fixed": "#002113", "secondary": "#ffb3b6", "on-secondary-container": "#ffdcdc", "secondary-container": "#cc003c", "on-tertiary-fixed-variant": "#005236", "inverse-primary": "#735c00", "on-error": "#690005", "tertiary-container": "#33ca90", "on-primary-fixed-variant": "#574500", "surface-dim": "#14121a", "on-background": "#e6e0ec", "surface": "#14121a", "tertiary-fixed": "#6ffbbe", "tertiary": "#58e7aa", "surface-container": "#211e27", "surface-variant": "#36333c", "on-primary-fixed": "#241a00", "on-tertiary": "#003824", "on-surface": "#e6e0ec", "outline-variant": "#4d4635", "on-secondary-fixed": "#40000c", "secondary-fixed-dim": "#ffb3b6", "tertiary-fixed-dim": "#4edea3", "on-secondary-fixed-variant": "#920028" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-lg": "1.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem" }, "fontFamily": { "stat-mono-lg": [ "JetBrains Mono" ], "headline-md": [ "Bodoni Moda" ], "stat-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Bodoni Moda" ], "body-lg": [ "Geist" ], "headline-lg-mobile": [ "Bodoni Moda" ], "headline-sm": [ "Bodoni Moda" ], "headline-lg": [ "Bodoni Moda" ], "body-sm": [ "Geist" ], "display-hero-mobile": [ "Bodoni Moda" ], "body-md": [ "Geist" ], "label-caps": [ "JetBrains Mono" ], "vazir": [ "Vazirmatn", "sans-serif" ] }, "fontSize": { "stat-mono-lg": [ "20px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "stat-mono-sm": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.65)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rotate-45 bg-primary shadow-[0_0_8px_rgba(242,202,80,0.8)]"></div><span class="font-headline-sm text-headline-sm uppercase text-primary tracking-widest" data-i18n="logoTitle">Game Database</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><div class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></div><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase tracking-wider" data-i18n="versionBadge">VER 2.0.4 // REALM ONLINE</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[0_0_12px_rgba(242,202,80,0.3)]"><a aria-current="page" class="px-space-md py-space-xs rounded uppercase transition-all bg-surface-container-high text-primary font-bold shadow-[0_0_12px_rgba(242,202,80,0.3)] smooth-motion" data-i18n="navCharacters" data-path="characters" href="#">Characters</a><a class="px-space-md py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all smooth-motion" data-i18n="navAbilities" data-path="abilities" href="#">Abilities</a><a class="px-space-md py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all smooth-motion" data-i18n="navDatabase" data-path="database-compendium" href="#">Database</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-primary text-[18px]">shield</span><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant" data-i18n="latency">LATENCY: 24MS</span></div><!-- Sound Toggle Button --><button class="flex items-center gap-1.5 px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded font-stat-mono-sm text-stat-mono-sm text-on-surface-variant hover:text-primary transition-all smooth-motion border border-outline-variant/30" id="sound-toggle-btn" title="Toggle Sound"><span class="material-symbols-outlined text-primary text-[18px]" id="sound-icon">volume_up</span><span class="hidden sm:inline" id="sound-text">SOUND: ON</span></button><!-- Language Switcher Toggle --><button class="flex items-center gap-1 px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded font-stat-mono-sm text-stat-mono-sm text-primary hover:text-primary-fixed border border-primary/30 shadow-[0_0_8px_rgba(242,202,80,0.15)] transition-all smooth-motion" id="lang-toggle-btn"><span class="material-symbols-outlined text-[16px]">translate</span><span class="font-bold" id="lang-label">فارسی | EN</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer transition-transform hover:scale-105"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#d0c5af", "primary": "#ff2a8d", "surface-bright": "#3b3841", "error": "#ffb4ab", "on-error-container": "#ffdad6", "surface-container-low": "#1c1a23", "on-secondary": "#68001a", "surface-container-highest": "#36333c", "surface-container-lowest": "#0f0d15", "inverse-on-surface": "#322f38", "error-container": "#93000a", "surface-container-high": "#2b2931", "on-primary-container": "#ffe4ec", "inverse-surface": "#e6e0ec", "outline": "#99907c", "primary-fixed-dim": "#f43f5e", "primary-container": "#ff2a8d", "on-primary": "#ffffff", "primary-fixed": "#ff80b5", "background": "#14121a", "on-tertiary-container": "#005035", "surface-tint": "#ff2a8d", "secondary-fixed": "#ffdada", "on-tertiary-fixed": "#002113", "secondary": "#ffb3b6", "on-secondary-container": "#ffdcdc", "secondary-container": "#cc003c", "on-tertiary-fixed-variant": "#005236", "inverse-primary": "#9f1239", "on-error": "#690005", "tertiary-container": "#33ca90", "on-primary-fixed-variant": "#831843", "surface-dim": "#14121a", "on-background": "#e6e0ec", "surface": "#14121a", "tertiary-fixed": "#6ffbbe", "tertiary": "#58e7aa", "surface-container": "#211e27", "surface-variant": "#36333c", "on-primary-fixed": "#4c0519", "on-tertiary": "#003824", "on-surface": "#e6e0ec", "outline-variant": "#4d4635", "on-secondary-fixed": "#40000c", "secondary-fixed-dim": "#ffb3b6", "tertiary-fixed-dim": "#4edea3", "on-secondary-fixed-variant": "#920028" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-lg": "1.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem" }, "fontFamily": { "stat-mono-lg": [ "JetBrains Mono" ], "headline-md": [ "Bodoni Moda" ], "stat-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Bodoni Moda" ], "body-lg": [ "Geist" ], "headline-lg-mobile": [ "Bodoni Moda" ], "headline-sm": [ "Bodoni Moda" ], "headline-lg": [ "Bodoni Moda" ], "body-sm": [ "Geist" ], "display-hero-mobile": [ "Bodoni Moda" ], "body-md": [ "Geist" ], "label-caps": [ "JetBrains Mono" ], "vazir": [ "Vazirmatn", "sans-serif" ] }, "fontSize": { "stat-mono-lg": [ "20px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "stat-mono-sm": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.65)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rotate-45 bg-primary shadow-[0_0_8px_rgba(255,42,141,0.8)]"></div><span class="font-headline-sm text-headline-sm uppercase text-primary tracking-widest" data-i18n="logoTitle">Game Database</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><div class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></div><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase tracking-wider" data-i18n="versionBadge">VER 2.0.4 // REALM ONLINE</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[0_0_12px_rgba(255,42,141,0.3)]"><a aria-current="page" class="px-space-md py-space-xs rounded uppercase transition-all bg-surface-container-high text-primary font-bold shadow-[0_0_12px_rgba(255,42,141,0.3)] smooth-motion" data-i18n="navCharacters" data-path="characters" href="#">Characters</a><a class="px-space-md py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all smooth-motion" data-i18n="navAbilities" data-path="abilities" href="#">Abilities</a><a class="px-space-md py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all smooth-motion" data-i18n="navDatabase" data-path="database-compendium" href="#">Database</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-primary text-[18px]">shield</span><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant" data-i18n="latency">LATENCY: 24MS</span></div><!-- Sound Toggle Button --><button class="flex items-center gap-1.5 px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded font-stat-mono-sm text-stat-mono-sm text-on-surface-variant hover:text-primary transition-all smooth-motion border border-outline-variant/30" id="sound-toggle-btn" title="Toggle Sound"><span class="material-symbols-outlined text-primary text-[18px]" id="sound-icon">volume_up</span><span class="hidden sm:inline" id="sound-text">SOUND: ON</span></button><!-- Language Switcher Toggle --><button class="flex items-center gap-1 px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded font-stat-mono-sm text-stat-mono-sm text-primary hover:text-primary-fixed border border-primary/30 shadow-[0_0_8px_rgba(255,42,141,0.25)] transition-all smooth-motion" id="lang-toggle-btn"><span class="material-symbols-outlined text-[16px]">translate</span><span class="font-bold" id="lang-label">فارسی | EN</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer transition-transform hover:scale-105 shadow-[0_0_10px_rgba(255,42,141,0.5)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
 <div class="w-full px-margin-sm md:px-margin py-space-md flex flex-col gap-space-md">
 <div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded shadow-2xl">
 <div class="flex items-center gap-space-md">
@@ -61,9 +67,9 @@ html[dir="rtl"] .font-body-sm {
 <div class="flex items-center gap-space-md">
 <div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded">
 <span class="w-2 h-2 rounded-full bg-tertiary"></span>
-<span class="font-stat-mono-sm text-stat-mono-sm text-tertiary uppercase" data-i18n="stateLabel">STATE: PENDING INITIALIZATION</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-tertiary uppercase" data-i18n="stateLabel">STATE: INITIALIZED</span>
 </div>
-<div class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant"><span data-i18n="sysRevLabel">SYS_REV:</span> <span class="text-on-surface" data-i18n="sysRevValue">EMPTY_TEMPLATE_V1</span></div>
+<div class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant"><span data-i18n="sysRevLabel">SYS_REV:</span> <span class="text-on-surface" data-i18n="sysRevValue">DUKE_SYNTHESIS_V2</span></div>
 </div>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
@@ -86,111 +92,43 @@ html[dir="rtl"] .font-body-sm {
 </div>
 <span class="font-stat-mono-sm text-stat-mono-sm text-primary transition-opacity duration-300" id="preview-slot-label">CHARACTER 01</span>
 </div>
-<div class="relative flex-1 flex flex-col items-center justify-center p-space-lg overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-surface-container-lowest" id="visual-matrix-panel">
-<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
-<div class="relative w-64 h-80 rounded flex flex-col items-center justify-center bg-surface-container shadow-2xl overflow-hidden smooth-pulse">
-<div class="absolute top-2 left-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
-<div class="absolute top-2 right-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
-<div class="absolute bottom-2 left-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
-<div class="absolute bottom-2 right-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
-<div class="relative flex items-center justify-center w-36 h-36 rounded-full bg-surface-container-low shadow-[0_0_30px_rgba(242,202,80,0.15)] animate-pulse">
-<span class="font-display-hero text-display-hero text-primary select-none opacity-80">?</span>
-</div>
-<div class="mt-space-md flex flex-col items-center gap-space-xs px-space-sm">
-<div class="px-space-sm py-space-xs rounded bg-surface-container-lowest">
-<span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase tracking-wider" data-i18n="awaitingAsset">AWAITING ASSET</span>
-</div>
-</div>
-</div>
-<div class="mt-space-lg text-center px-space-md">
-<p class="font-body-sm text-body-sm text-on-surface-variant tracking-wide uppercase transition-opacity duration-300" data-i18n="artworkNotice">
-              Character artwork will be added later
-            </p>
-<div class="mt-space-xs font-stat-mono-sm text-stat-mono-sm text-outline tracking-widest transition-opacity duration-300" data-i18n="slotStandby">
-              SLOT: UNASSIGNED // PROJECTION STANDBY
-            </div>
-</div>
-</div>
+<div class="relative flex-1 flex flex-col items-center justify-center p-space-lg overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-surface-container-lowest" id="visual-matrix-panel"></div>
 <div class="bg-surface-container-low px-space-md py-space-xs flex items-center justify-between text-on-surface-variant font-stat-mono-sm text-stat-mono-sm">
 <span data-i18n="frameRatio">FRAME RATIO: 4:5</span>
-<span data-i18n="diagnostic">DIAGNOSTIC: NORMAL</span>
+<span data-i18n="diagnostic" id="diagnostic-status-text">DIAGNOSTIC: NORMAL</span>
 </div>
 </div>
 <div class="lg:col-span-5 flex flex-col gap-space-md">
 <div class="bg-surface-container-lowest rounded p-space-md shadow-2xl flex flex-col gap-space-md relative overflow-hidden transition-all duration-300" id="detail-panel">
-<div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded smooth-motion">
-<div class="w-20 h-20 bg-surface-container-lowest rounded flex items-center justify-center shrink-0 shadow-inner">
-<span class="font-headline-lg text-headline-lg text-primary select-none">?</span>
-</div>
-<div class="flex-1 flex flex-col gap-space-xs">
-<div class="flex items-center justify-between flex-wrap gap-space-xs">
-<span class="font-stat-mono-sm text-stat-mono-sm text-primary uppercase tracking-widest transition-opacity duration-300" id="char-id-tag">CHARACTER 01</span>
-<div class="flex items-center gap-space-sm">
-<div class="bg-tertiary-container/30 px-space-sm py-0.5 rounded flex items-center gap-space-xs shadow-[0_0_12px_rgba(51,202,144,0.3)]">
-<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-<span class="font-stat-mono-sm text-stat-mono-sm text-tertiary font-bold tracking-wider" id="char-level-badge">LV. 1</span>
-</div>
-<div class="bg-surface-container-lowest px-space-sm py-0.5 rounded flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
-<span class="font-stat-mono-sm text-stat-mono-sm text-secondary font-bold tracking-wider" id="char-hp-badge">HP: ---</span>
-</div>
-</div>
-</div>
-<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wide transition-opacity duration-300" id="char-title">EMPTY CHARACTER</h2>
-<div class="flex items-center gap-space-xs mt-1">
-<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest" data-i18n="designationLabel">DESIGNATION:</span>
-<span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase" data-i18n="designationValue">ARCHIVE_PLACEHOLDER</span>
-</div>
-</div>
-</div>
+<div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded smooth-motion border border-outline-variant/30 shadow-lg" id="identity-card-wrapper"><div class="w-20 h-20 bg-surface-container-lowest rounded overflow-hidden shrink-0 shadow-inner border border-primary/40 relative flex items-center justify-center" id="char-avatar-container"><img alt="دوک بی چهره" class="w-full h-full object-cover object-[center_12%] scale-125" id="char-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQpY6Oyb5HV9lbpnil-VPMEtwv17wYcXr-Hg90-NE-hE6IKtuunY702a6R4-zln9gWnuRAhlAHg7GsrILTSS1apLYyjhx7alGSqZ4qPwonKCGPI8doxBmUxXX6yAL7gCsCHx2tnBlRaX3d6JP_sM4gn11j147FzEcnk9iTbHC34-i9tNPPluntr0i0XAooNUSY-iYgHrXg5fXT7z9IgXHKifi9rbQj7vwzyPmK-pZCSSh_524gipZ-VQ"/><div class="absolute inset-0 border border-primary/20 pointer-events-none rounded"></div></div><div class="flex-1 flex flex-col gap-space-xs"><div class="flex items-center justify-between flex-wrap gap-space-xs"><span class="font-stat-mono-sm text-stat-mono-sm text-primary uppercase tracking-widest transition-opacity duration-300" id="char-id-tag">CHARACTER 01</span><div class="flex items-center gap-space-sm"><div class="bg-tertiary-container/30 px-space-sm py-0.5 rounded flex items-center gap-space-xs shadow-[0_0_12px_rgba(51,202,144,0.3)] transition-all duration-300" id="char-level-badge-wrap"><span class="w-1.5 h-1.5 rounded-full bg-tertiary" id="char-level-dot"></span><span class="font-stat-mono-sm text-stat-mono-sm text-tertiary font-bold tracking-wider" id="char-level-badge">LV. 1</span></div><div class="bg-surface-container-lowest px-space-sm py-0.5 rounded flex items-center gap-space-xs border border-secondary/20 shadow-sm transition-all duration-300" id="char-hp-badge-wrap"><span class="material-symbols-outlined text-secondary text-[16px]" id="char-hp-icon" style="font-variation-settings: 'FILL' 1;">favorite</span><span class="font-stat-mono-sm text-stat-mono-sm text-secondary font-bold tracking-wider" id="char-hp-badge">HP: 560</span></div></div></div><h2 class="font-headline-md text-headline-md text-primary font-bold tracking-wide transition-opacity duration-300" id="char-title">دوک بی چهره</h2><div class="flex items-center gap-space-xs mt-1"><span class="font-label-caps text-label-caps text-outline uppercase tracking-widest" data-i18n="designationLabel">DESIGNATION:</span><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase font-medium tracking-wide" data-i18n="designationValue" id="char-designation-val">ARCHIVE SUBJECT (سوژه بایگانی)</span></div></div></div>
 <div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded smooth-motion">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-space-xs">
 <span class="material-symbols-outlined text-primary text-[18px]">menu_book</span>
 <span class="font-label-caps text-label-caps uppercase text-primary tracking-widest" data-i18n="storyTitle">STORY</span>
 </div>
-<span class="font-stat-mono-sm text-stat-mono-sm text-outline" data-i18n="loreArchive">LORE ARCHIVE [NULL]</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-outline" data-i18n="loreArchive" id="lore-archive-status">LORE ARCHIVE [NULL]</span>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-space-xs transition-opacity duration-300" id="story-content">
-              No character story has been added yet.
-            </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-space-xs transition-opacity duration-300" id="story-content">دوک در دوران باستان زندگی می‌کرده، یک دستگاهی ساخته بود که می‌توانست واقعیت را دستکاری کند، اما دستگاه درست کار نکرد و یک تغییر بزرگ در جهان ایجاد کرد. این تغییر باعث شد نسل ومپایرها به وجود بیاید.</p>
 </div>
-<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded smooth-motion">
-<div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
-<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest" data-i18n="telemetryTitle">ABILITY TELEMETRY</span>
-</div>
-<span class="font-stat-mono-sm text-stat-mono-sm uppercase transition-colors duration-300" id="active-ability-meta">ABILITY 1 // NORMAL</span>
-</div>
-<div class="pt-space-xs flex flex-col gap-space-xs">
-<div class="flex items-center gap-space-sm">
-<div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(242,202,80,0.8)] transition-all duration-300" id="active-ability-indicator"></div>
-<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider transition-opacity duration-300" id="active-ability-title">[ ? ] ABILITY 1 - EMPTY</h3>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed transition-opacity duration-300" id="active-ability-desc">
-                No ability description has been added yet.
-              </p>
-</div>
-</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded smooth-motion border border-outline-variant/30 shadow-lg"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">bolt</span><span class="font-label-caps text-label-caps uppercase text-primary tracking-widest" data-i18n="telemetryTitle">ABILITY TELEMETRY</span></div><span class="font-stat-mono-sm text-stat-mono-sm uppercase transition-colors duration-300 text-primary font-bold" id="active-ability-meta">ABILITY 1 // NORMAL</span></div><div class="pt-space-xs flex flex-col gap-space-xs"><div class="flex items-center justify-between flex-wrap gap-2"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(255,42,141,0.8)] transition-all duration-300" id="active-ability-indicator"></div><h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider transition-opacity duration-300 font-bold" id="active-ability-title">مینی شوکر</h3></div><div class="flex items-center gap-space-xs"><span class="px-2 py-0.5 rounded bg-surface-container-lowest font-stat-mono-sm text-stat-mono-sm text-primary border border-primary/30" id="active-ability-cost">⚡ هزینه انرژی: ۳</span></div></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed transition-opacity duration-300" id="active-ability-desc">به صورت گروهی به حریفان آسیب می‌زند و آسیب بین آن‌ها توزیع می‌شود.</p><div class="flex items-center gap-space-md mt-1 pt-2 border-t border-outline-variant/20 flex-wrap font-stat-mono-sm text-stat-mono-sm text-on-surface-variant" id="telemetry-metrics-bar"><div class="flex items-center gap-1"><span class="text-outline" id="telemetry-damage-label">میزان آسیب سطح ۱:</span><span class="text-tertiary font-bold tracking-wider" id="telemetry-damage-val">38 / 38 / 38</span></div><div class="flex items-center gap-1" id="telemetry-extra-badge"><span class="text-outline">نوع اثر:</span><span class="text-primary">پخش شونده گروهی</span></div></div></div></div>
 <div class="flex flex-col gap-space-sm pt-space-xs">
 <div class="flex items-center justify-between">
 <span class="font-label-caps text-label-caps uppercase text-outline tracking-widest" data-i18n="equippedAbilities">EQUIPPED ABILITIES (EXACTLY 3 SLOTS)</span>
-<span class="font-stat-mono-sm text-stat-mono-sm text-outline" data-i18n="selectToInspect">SELECT TO INSPECT</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-outline" data-i18n="selectToInspect" id="inspect-hint-label">SELECT TO INSPECT</span>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm" id="ability-cards-container">
-</div>
+<div class="grid grid-cols-3 gap-space-sm w-full" id="ability-cards-container"><button aria-label="مینی شوکر" class="relative w-full aspect-[3/4] rounded p-1 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 smooth-pulse bg-surface-container-lowest group cursor-pointer border-2 border-primary shadow-[0_0_22px_rgba(255,42,141,0.55)] scale-[1.04] ring-2 ring-primary/40 z-10" data-index="0" type="button"><img alt="مینی شوکر" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105 group-hover:contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-GBjfisRQPlVFiy913gN2H3iwUUA6bw2INN-50xLyGuzCI1pir99wsCLKtK4RjpOvcCFfeMiJCDaDRd40AgGxjPF1c9EsIl53q3MyOCm8JpQHkxLqOWyAhl1MDCUt565HJ6390gsJmGk46cxJVCeFPm66yrao3M7ow-56FBzk3k68i09own0Y5126dMBvch3dtIxBX_pio5DQEujB4wiH9ms1yiOOlSJp2cDk3j1qRgEFjAvUD1Dqw"/><div class="absolute top-1.5 left-1.5 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_8px_rgba(255,42,141,0.9)] z-10"></div><div class="absolute bottom-1 inset-x-1 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm border border-primary/40 text-center shadow-lg"><span class="font-stat-mono-sm text-stat-mono-sm text-primary font-bold tracking-wider truncate block">مینی شوکر</span></div></button><button aria-label="مخ چین" class="relative w-full aspect-[3/4] rounded p-1 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 smooth-pulse bg-surface-container-lowest group cursor-pointer border border-outline-variant/40 hover:border-primary/60 hover:shadow-[0_0_15px_rgba(255,42,141,0.3)] opacity-85 hover:opacity-100 hover:scale-[1.02]" data-index="1" type="button"><img alt="مخ چین" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105 group-hover:contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1Hlf7grEZMfW_OmoAsmVacIqpcj89iyXPeVBDfv3NVuUgZof5pwEsbJYAHDqWt2xznfK3dodLYMAPXLougnMXgx_dQ4PLJG-H421_7-PlPFE4SCl9oE2R3_RhbwnnDcnDuHhy3uM-ywiOWsipKry1_-eEnUS_F6g3DuNcBbP5UidoRdsdfD2R0pSPVmiNWZzWpz72xUbyoh0o25Q3Jr8qw1GF2tsYg2O7mzqs04eHiCgWdMx60kxIXg"/><div class="absolute top-1.5 left-1.5 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_8px_rgba(255,42,141,0.9)] z-10"></div><div class="absolute bottom-1 inset-x-1 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/40 text-center shadow-lg"><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface font-medium tracking-wider truncate block">مخ چین</span></div></button><button aria-label="سیم آخر" class="relative w-full aspect-[3/4] rounded p-1 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 smooth-pulse bg-surface-container-lowest group cursor-pointer border border-secondary-container/50 hover:border-secondary hover:shadow-[0_0_15px_rgba(204,0,60,0.35)] opacity-85 hover:opacity-100 hover:scale-[1.02]" data-index="2" type="button"><img alt="سیم آخر" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105 group-hover:contrast-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv7ojokQgggac1Mc-Jd8Wbu0ea5EKpe1060OLjql5cJz2oerMpxCtedGdu3hGvGNuN1CzhCu5v6kSaaxccQpuaog2bssY2V9qjd3SXL3ccn3iRrhNIQkmU3YePUUlKFpbxmMH2cmvqQNjuZ2-uhlGxH9pg5sA2Jiu45vhaaeW6mR1CvgFJpRRtGVME78p7bbCldS76fXxSmDfv59776QC10es8hZ-s8lJNPXWV-1leAbqOmaf7A93EIg"/><div class="absolute top-1.5 left-1.5 w-2.5 h-2.5 bg-secondary rounded-full shadow-[0_0_8px_rgba(255,179,182,0.9)] z-10"></div><div class="absolute bottom-1 inset-x-1 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm border border-outline-variant/40 text-center shadow-lg"><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface font-medium tracking-wider truncate block">سیم آخر</span></div></button></div>
 <!-- Mana Percentage Gauge Bar (Under the ability cards) -->
 <div class="mt-space-xs bg-surface-container-low p-space-sm rounded flex flex-col gap-1.5 border border-outline-variant/30 shadow-inner">
 <div class="flex items-center justify-between">
 <div class="flex items-center gap-space-xs">
-<span class="material-symbols-outlined text-primary text-[16px]">water_drop</span>
-<span class="font-stat-mono-sm text-stat-mono-sm text-primary tracking-wider" id="mana-status-text">MANA: 0 / 100</span>
+<span class="material-symbols-outlined text-primary text-[16px]" id="mana-status-icon">water_drop</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-primary tracking-wider" id="mana-status-text">MANA: 60 / 100</span>
 </div>
-<span class="font-stat-mono-sm text-stat-mono-sm text-outline" id="mana-percentage-text">0%</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-primary" id="mana-percentage-text">60%</span>
 </div>
 <div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden border border-outline-variant/40 relative">
-<div class="h-full bg-gradient-to-r from-primary/40 to-primary w-0 rounded-full transition-all duration-500 shadow-[0_0_8px_rgba(242,202,80,0.4)]" id="mana-progress-bar"></div>
+<div class="h-full bg-gradient-to-r from-primary/50 via-primary to-primary-fixed w-[60%] rounded-full transition-all duration-500 shadow-[0_0_10px_rgba(255,42,141,0.5)]" id="mana-progress-bar"></div>
 </div>
 </div>
 </div>
@@ -215,36 +153,29 @@ html[dir="rtl"] .font-body-sm {
       archivesTitle: "Compendium Archives",
       registryLabel: "Registry:",
       registryValue: "12 SLOTS ALLOCATED",
-      stateLabel: "STATE: PENDING INITIALIZATION",
+      stateLabel: "STATE: INITIALIZED",
       sysRevLabel: "SYS_REV:",
-      sysRevValue: "EMPTY_TEMPLATE_V1",
+      sysRevValue: "DUKE_SYNTHESIS_V2",
       rosterIndex: "Roster Index",
       visualMatrix: "Visual Matrix",
-      awaitingAsset: "AWAITING ASSET",
-      artworkNotice: "Character artwork will be added later",
-      slotStandby: "SLOT: UNASSIGNED // PROJECTION STANDBY",
+      artworkNotice: "ARCHIVE SUBJECT // ACTIVE SYNTHESIS",
+      slotStandby: "SLOT 01: ASSIGNED // VAMPIRE ORIGIN",
       frameRatio: "FRAME RATIO: 4:5",
       diagnostic: "DIAGNOSTIC: NORMAL",
+      diagnosticLocked: "DIAGNOSTIC: RESTRICTED",
       levelPrefix: "LV. ",
       hpPrefix: "HP: ---",
       designationLabel: "DESIGNATION:",
-      designationValue: "ARCHIVE_PLACEHOLDER",
+      designationValue: "ARCHIVE SUBJECT (سوژه بایگانی)",
+      designationLocked: "ENCRYPTED FREQUENCY // UNREGISTERED",
       storyTitle: "STORY",
       loreArchive: "LORE ARCHIVE [NULL]",
-      storyPlaceholder: "No character story has been added yet.",
-      telemetryTitle: "ABILITY TELEMETRY",
+      loreArchiveLocked: "LORE ARCHIVE [ENCRYPTED]",
       equippedAbilities: "EQUIPPED ABILITIES (EXACTLY 3 SLOTS)",
       selectToInspect: "SELECT TO INSPECT",
-      manaLabel: "MANA: 0 / 100",
-      charNamePlaceholder: "EMPTY CHARACTER",
+      manaLabel: "MANA: 60 / 100",
+      charNamePlaceholder: "EMPTY ARCHIVE",
       charIdPrefix: "CHARACTER ",
-      abilitySlotPrefix: "SLOT 0",
-      badgeNormal: "NORMAL",
-      badgeSpecial: "SPECIAL",
-      ability1Title: "[ ? ] ABILITY 1 - EMPTY",
-      ability2Title: "[ ? ] ABILITY 2 - EMPTY",
-      abilitySpecialTitle: "[ ? ] SPECIAL - EMPTY",
-      abilityDescPlaceholder: "No ability description has been added yet.",
       footerRights: "© CODEX IMPERIUM. ALL RIGHTS RESERVED.",
       footerTerms: "SANCTUM TERMS",
       footerLicense: "LORE LICENSE",
@@ -262,36 +193,29 @@ html[dir="rtl"] .font-body-sm {
       archivesTitle: "بایگانی جامع",
       registryLabel: "ثبت‌شده:",
       registryValue: "۱۲ جایگاه اختصاص یافته",
-      stateLabel: "وضعیت: در انتظار مقداردهی اولیه",
+      stateLabel: "وضعیت: راه‌اندازی شده",
       sysRevLabel: "نسخه سیستم:",
-      sysRevValue: "الگوی_خالی_نسخه۱",
+      sysRevValue: "تلفیق_دوک_نسخه۲",
       rosterIndex: "فهرست اعضا",
       visualMatrix: "ماتریس بصری",
-      awaitingAsset: "در انتظار محتوا",
-      artworkNotice: "تصویر شخصیت بعداً افزوده خواهد شد",
-      slotStandby: "جایگاه: تخصیص‌نیافته // آماده‌باش بازتاب",
+      artworkNotice: "سوژه بایگانی // سنتز فعال",
+      slotStandby: "جایگاه ۰۱: تخصیص یافته // منشأ خون‌آشام",
       frameRatio: "نسبت کادر: ۴:۵",
       diagnostic: "تشخیص: عادی",
+      diagnosticLocked: "تشخیص: دسترسی محدود",
       levelPrefix: "سطح ",
       hpPrefix: "سلامت: ---",
       designationLabel: "شناسه:",
-      designationValue: "متغیر جایگزین بایگانی",
+      designationValue: "سوژه بایگانی (ARCHIVE SUBJECT)",
+      designationLocked: "فرکانس رمزنگاری‌شده // ثبت‌نشده",
       storyTitle: "داستان",
-      loreArchive: "بایگانی سرگذشت [تهی]",
-      storyPlaceholder: "هنوز هیچ داستانی برای این شخصیت ثبت نشده است.",
-      telemetryTitle: "داده‌سنجی قابلیت",
+      loreArchive: "بایگانی سرگذشت [ثبت‌شده]",
+      loreArchiveLocked: "بایگانی سرگذشت [رمزگذاری‌شده]",
       equippedAbilities: "قابلیت‌های مجهز شده (دقیقاً ۳ جایگاه)",
       selectToInspect: "انتخاب جهت بررسی",
-      manaLabel: "مانا: ۰ از ۱۰۰",
-      charNamePlaceholder: "شخصیت خالی",
+      manaLabel: "مانا: ۶۰ از ۱۰۰",
+      charNamePlaceholder: "بایگانی خالی",
       charIdPrefix: "شخصیت ",
-      abilitySlotPrefix: "جایگاه ۰",
-      badgeNormal: "عادی",
-      badgeSpecial: "ویژه",
-      ability1Title: "[ ؟ ] قابلیت ۱ - خالی",
-      ability2Title: "[ ؟ ] قابلیت ۲ - خالی",
-      abilitySpecialTitle: "[ ؟ ] قابلیت ویژه - خالی",
-      abilityDescPlaceholder: "هنوز هیچ توضیحی برای این قابلیت ثبت نشده است.",
       footerRights: "کدکس ایمپریوم. تمامی حقوق محفوظ است.",
       footerTerms: "قوانین سنکتوم",
       footerLicense: "مجوز روایات",
@@ -333,7 +257,6 @@ html[dir="rtl"] .font-body-sm {
       masterGain.connect(ctx.destination);
 
       if (type === 'hover') {
-        // High soft blip
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         osc.type = 'sine';
@@ -346,7 +269,6 @@ html[dir="rtl"] .font-body-sm {
         osc.start(now);
         osc.stop(now + 0.04);
       } else if (type === 'character') {
-        // Low cyber chime chord
         const osc1 = ctx.createOscillator();
         const osc2 = ctx.createOscillator();
         const gain = ctx.createGain();
@@ -364,29 +286,39 @@ html[dir="rtl"] .font-body-sm {
         osc2.start(now);
         osc1.stop(now + 0.14);
         osc2.stop(now + 0.14);
-      } else if (type === 'ability') {
-        // Tactile crisp feedback click
+      } else if (type === 'locked') {
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(600, now);
-        osc.frequency.exponentialRampToValueAtTime(300, now + 0.06);
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(160, now);
+        osc.frequency.exponentialRampToValueAtTime(85, now + 0.14);
         gain.gain.setValueAtTime(0.08, now);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.14);
         osc.connect(gain);
         gain.connect(masterGain);
         osc.start(now);
-        osc.stop(now + 0.06);
+        osc.stop(now + 0.14);
+      } else if (type === 'ability') {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(650, now);
+        osc.frequency.exponentialRampToValueAtTime(380, now + 0.08);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.08);
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now);
+        osc.stop(now + 0.08);
       } else if (type === 'special') {
-        // High harmonic special chime
         const osc1 = ctx.createOscillator();
         const osc2 = ctx.createOscillator();
         const gain = ctx.createGain();
         osc1.type = 'sawtooth';
         osc2.type = 'sine';
-        osc1.frequency.setValueAtTime(523.25, now); // C5
-        osc1.frequency.exponentialRampToValueAtTime(1046.5, now + 0.18); // C6
-        osc2.frequency.setValueAtTime(783.99, now); // G5
+        osc1.frequency.setValueAtTime(523.25, now);
+        osc1.frequency.exponentialRampToValueAtTime(1046.5, now + 0.18);
+        osc2.frequency.setValueAtTime(783.99, now);
         gain.gain.setValueAtTime(0.06, now);
         gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
         osc1.connect(gain);
@@ -397,7 +329,6 @@ html[dir="rtl"] .font-body-sm {
         osc1.stop(now + 0.2);
         osc2.stop(now + 0.2);
       } else if (type === 'switch') {
-        // Subtle toggle click
         const osc = ctx.createOscillator();
         const gain = ctx.createGain();
         osc.type = 'sine';
@@ -413,12 +344,59 @@ html[dir="rtl"] .font-body-sm {
     } catch(e) {}
   }
 
+  // Character 1 (Duke) abilities telemetry dataset with Exact DataStore placeholders
+  const dukeAbilities = [
+    {
+      id: 0,
+      badge: "ABILITY 1 // NORMAL",
+      badgeFa: "قابلیت ۱ // عادی",
+      name: "مینی شوکر",
+      energyCost: "⚡ هزینه انرژی: ۳",
+      desc: "به صورت گروهی به حریفان آسیب می‌زند و آسیب بین آن‌ها توزیع می‌شود.",
+      damage: "38 / 38 / 38",
+      damageLabel: "میزان آسیب سطح ۱:",
+      extraKey: "نوع اثر:",
+      extraVal: "پخش شونده گروهی",
+      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDsyYIx5oCjlzzaoeRwEHQD_ubORPBbv4awNly2DRdd_ut006gq4YVvDDEZn0ad8UU_Unvs-SSLLMmCg0UQhEbqr0ulsR1h2PF5b3cqU8BO8BwDIUgiFv-vztwZlzBHrBGG69osmzTx9HK-GtOiGOV9fkSrBEdLlhdpwVkidfq-CLXwJKGOZsN0cdAd-cChdb3ZmUfjFomsB_7lhaasieGzVejADYvdKZokB3ZnIe8hGlBOowuMrvEzSA",
+      isSpecial: false
+    },
+    {
+      id: 1,
+      badge: "ABILITY 2 // NORMAL",
+      badgeFa: "قابلیت ۲ // عادی",
+      name: "مخ چین",
+      energyCost: "⚡ هزینه انرژی: ۴",
+      desc: "به هدف خود آسیب می‌زند. اگر چند بار متوالی به یک هدف آسیب وارد شود، هر ضربه تکراری 15 واحد آسیب کمتری وارد می‌کند.",
+      damage: "135",
+      damageLabel: "میزان آسیب سطح ۱:",
+      extraKey: "کاهش ضربه تکراری:",
+      extraVal: "۱۵ واحد (15 DAMAGE)",
+      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuB9OkGokW0rm11RH3-D1h6Ue5n-61wamn7ZhdZaqnW_hTe1mL1UX004F0QCXA-V86qUjbopQ_-kA-b9B_lZzH7QtO7yM_kCWSZCfLW8bZ8oIgmp15uRHP6mP5OH5fXrUcqCJ1ViqjPU1nrwI1UrRBxQbnHLPXL5-3p9JAcj3AqyxIHENLuyN1Z3TtUNdgMD9Pie3utdx0p5LHU-nikT2E2Izo-PDWItCAHzpHzURQrrfTltENvCh-VU2w",
+      isSpecial: false
+    },
+    {
+      id: 2,
+      badge: "ABILITY 3 // SPECIAL",
+      badgeFa: "قابلیت ۳ // ویژه",
+      name: "سیم آخر",
+      energyCost: "⚡ هزینه انرژی: ۴",
+      desc: "به صورت شانسی به یکی از حریفان آسیب می‌زند.",
+      damage: "188",
+      damageLabel: "میزان آسیب سطح ۱:",
+      extraKey: "نوع هدف‌گیری:",
+      extraVal: "شانسی / بحرانی (RNG)",
+      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCSLO8q-CWkWDr8XmJNOjSKHIGRG0hsD-qJYfds0jZm_goaebSZwB96eHt50bsb4LftzP6hlMvhkWZ2Wy6hU65ZUopz4yPuTBHxCPhyBM4zY2LeFjcSM-QBj9_mqYIiHJfdeAQ3xUBIzMvVNuES9zNNIRowS7YTz9VzIQgQGvoyOEkhV8VLWNFIUBKZCIc5_Mqw44zf8fCYur27cUAtP0l90NpkrgoUefSPBuu-0KzjNEh7-fJM2bI--A",
+      isSpecial: true
+    }
+  ];
+
   const characters = Array.from({ length: 12 }, (_, i) => {
     const rawNum = String(i + 1).padStart(2, '0');
     return {
       index: i,
       rawNum: rawNum,
-      level: 1
+      level: 1,
+      isDuke: i === 0
     };
   });
 
@@ -428,18 +406,34 @@ html[dir="rtl"] .font-body-sm {
   // DOM Elements
   const rosterEl = document.getElementById('character-roster');
   const previewSlotLabel = document.getElementById('preview-slot-label');
+  const visualMatrixPanel = document.getElementById('visual-matrix-panel');
+  const diagnosticStatusText = document.getElementById('diagnostic-status-text');
+  const charAvatarContainer = document.getElementById('char-avatar-container');
   const charIdTag = document.getElementById('char-id-tag');
   const charTitle = document.getElementById('char-title');
   const charLevelBadge = document.getElementById('char-level-badge');
+  const charLevelBadgeWrap = document.getElementById('char-level-badge-wrap');
+  const charLevelDot = document.getElementById('char-level-dot');
   const charHpBadge = document.getElementById('char-hp-badge');
+  const charHpBadgeWrap = document.getElementById('char-hp-badge-wrap');
+  const charHpIcon = document.getElementById('char-hp-icon');
+  const charDesignationVal = document.getElementById('char-designation-val');
+  const loreArchiveStatus = document.getElementById('lore-archive-status');
   const storyContent = document.getElementById('story-content');
   const activeAbilityMeta = document.getElementById('active-ability-meta');
   const activeAbilityTitle = document.getElementById('active-ability-title');
   const activeAbilityDesc = document.getElementById('active-ability-desc');
+  const activeAbilityCost = document.getElementById('active-ability-cost');
   const activeAbilityIndicator = document.getElementById('active-ability-indicator');
+  const telemetryDamageLabel = document.getElementById('telemetry-damage-label');
+  const telemetryDamageVal = document.getElementById('telemetry-damage-val');
+  const telemetryExtraBadge = document.getElementById('telemetry-extra-badge');
+  const inspectHintLabel = document.getElementById('inspect-hint-label');
   const abilityCardsContainer = document.getElementById('ability-cards-container');
+  const manaStatusIcon = document.getElementById('mana-status-icon');
   const manaStatusText = document.getElementById('mana-status-text');
   const manaPercentageText = document.getElementById('mana-percentage-text');
+  const manaProgressBar = document.getElementById('mana-progress-bar');
   const rosterCountIndicator = document.getElementById('roster-count-indicator');
   const langToggleBtn = document.getElementById('lang-toggle-btn');
   const soundToggleBtn = document.getElementById('sound-toggle-btn');
@@ -452,35 +446,6 @@ html[dir="rtl"] .font-body-sm {
       return `${i18n.fa.charIdPrefix}${toPersianDigits(num)}`;
     }
     return `${i18n.en.charIdPrefix}${num}`;
-  }
-
-  function getAbilityData(abIdx) {
-    const isFa = currentLang === 'fa';
-    if (abIdx === 0) {
-      return {
-        type: 'NORMAL',
-        name: isFa ? i18n.fa.ability1Title : i18n.en.ability1Title,
-        badge: isFa ? i18n.fa.badgeNormal : i18n.en.badgeNormal,
-        meta: isFa ? "قابلیت ۱ // عادی" : "ABILITY 1 // NORMAL",
-        desc: isFa ? i18n.fa.abilityDescPlaceholder : i18n.en.abilityDescPlaceholder
-      };
-    } else if (abIdx === 1) {
-      return {
-        type: 'NORMAL',
-        name: isFa ? i18n.fa.ability2Title : i18n.en.ability2Title,
-        badge: isFa ? i18n.fa.badgeNormal : i18n.en.badgeNormal,
-        meta: isFa ? "قابلیت ۲ // عادی" : "ABILITY 2 // NORMAL",
-        desc: isFa ? i18n.fa.abilityDescPlaceholder : i18n.en.abilityDescPlaceholder
-      };
-    } else {
-      return {
-        type: 'SPECIAL',
-        name: isFa ? i18n.fa.abilitySpecialTitle : i18n.en.abilitySpecialTitle,
-        badge: isFa ? i18n.fa.badgeSpecial : i18n.en.badgeSpecial,
-        meta: isFa ? "قابلیت ۳ // ویژه" : "ABILITY 3 // SPECIAL",
-        desc: isFa ? i18n.fa.abilityDescPlaceholder : i18n.en.abilityDescPlaceholder
-      };
-    }
   }
 
   function applyLanguage(lang) {
@@ -500,15 +465,6 @@ html[dir="rtl"] .font-body-sm {
     // Sound button text update
     soundText.textContent = soundEnabled ? (isFa ? i18n.fa.soundOn : i18n.en.soundOn) : (isFa ? i18n.fa.soundOff : i18n.en.soundOff);
 
-    // Update roster count indicator
-    rosterCountIndicator.textContent = isFa 
-      ? `${toPersianDigits(String(selectedCharIndex + 1).padStart(2, '0'))} / ${toPersianDigits('12')}`
-      : `${String(selectedCharIndex + 1).padStart(2, '0')} / 12`;
-
-    // Update Mana Text
-    manaStatusText.textContent = isFa ? i18n.fa.manaLabel : i18n.en.manaLabel;
-    manaPercentageText.textContent = isFa ? toPersianDigits('0%') : '0%';
-
     updateView();
   }
 
@@ -519,39 +475,52 @@ html[dir="rtl"] .font-body-sm {
       const isFa = currentLang === 'fa';
       const item = document.createElement('button');
       item.type = 'button';
-      item.className = `w-full flex items-center justify-between p-space-sm rounded transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1) text-left smooth-pulse ${
+      item.className = `w-full flex items-center justify-between p-space-sm rounded transition-all duration-300 text-left smooth-pulse ${
         isSelected 
-          ? 'bg-surface-container-high shadow-[0_0_15px_rgba(242,202,80,0.25)] border border-primary/40' 
+          ? 'bg-surface-container-high shadow-[0_0_15px_rgba(255,42,141,0.3)] border border-primary/50' 
           : 'bg-surface-container-low hover:bg-surface-container border border-transparent'
       }`;
 
-      const charName = isFa ? i18n.fa.charNamePlaceholder : i18n.en.charNamePlaceholder;
+      const numStr = String(index + 1).padStart(2, '0');
+      const charName = char.isDuke 
+        ? "دوک بی چهره" 
+        : (isFa ? `جایگاه ${toPersianDigits(numStr)} (قفل شده)` : `SLOT ${numStr} // LOCKED`);
       const charId = getCharId(index);
-      const levelStr = isFa ? `${i18n.fa.levelPrefix}${toPersianDigits('1')}` : `${i18n.en.levelPrefix}1`;
-      const hpStr = isFa ? i18n.fa.hpPrefix : i18n.en.hpPrefix;
+      const levelStr = char.isDuke
+        ? (isFa ? `${i18n.fa.levelPrefix}${toPersianDigits('1')}` : `${i18n.en.levelPrefix}1`)
+        : "LV. --";
+      const hpStr = char.isDuke 
+        ? (isFa ? `سلامت: ${toPersianDigits('560')}` : "HP: 560") 
+        : (isFa ? i18n.fa.hpPrefix : i18n.en.hpPrefix);
+
+      const avatarMarkup = char.isDuke 
+        ? `<div class="w-10 h-10 rounded overflow-hidden shrink-0 border border-primary/50 relative bg-surface-container-lowest shadow-[0_0_8px_rgba(255,42,141,0.3)]">
+             <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlW4nxOFzpz9zpQax7ieBIrZS-1naERPXaeBeqTv-tk9HD0_0WrGh-q9KhqEdOZbFFR0Z714eYc-uiTZkNvp2IesPq68Xjvr_VkV4bYEWT8gUjeR9OMX9xgpvWPjzgzY8tE2qKLdQkXxwdu9e3gAWa5aFwATuudKDTOetzcsrPPmi4YYXPqTsm-hgW7wh352NCkU7NnXMvAcfvHmSq6dpei6YhlUYVNEqtIOwarigohKZwE68AY7b-WQ" alt="Duke Face Avatar" class="w-full h-full object-cover object-[center_12%] scale-150 transition-transform duration-300 group-hover:scale-160">
+           </div>`
+        : `<div class="w-10 h-10 rounded flex items-center justify-center font-stat-mono-lg text-stat-mono-lg shrink-0 transition-transform duration-300 ${
+             isSelected ? 'bg-primary text-on-primary font-bold shadow-[0_0_10px_rgba(255,42,141,0.5)] scale-105' : 'bg-surface-container-lowest text-on-surface-variant'
+           }">?</div>`;
 
       item.innerHTML = `
         <div class="flex items-center gap-space-sm">
-          <div class="w-10 h-10 rounded flex items-center justify-center font-stat-mono-lg text-stat-mono-lg shrink-0 transition-transform duration-300 ${
-            isSelected ? 'bg-primary text-on-primary font-bold shadow-[0_0_10px_rgba(242,202,80,0.5)] scale-105' : 'bg-surface-container-lowest text-on-surface-variant'
-          }">?</div>
+          ${avatarMarkup}
           <div class="flex flex-col">
             <span class="font-stat-mono-sm text-stat-mono-sm ${isSelected ? 'text-primary font-bold' : 'text-on-surface'}">${charId}</span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-[120px]">${charName}</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-[130px]">${charName}</span>
           </div>
         </div>
         <div class="flex flex-col items-end gap-0.5">
-          <span class="font-stat-mono-sm text-stat-mono-sm text-tertiary">${levelStr}</span>
-          <span class="font-stat-mono-sm text-stat-mono-sm text-secondary">${hpStr}</span>
+          <span class="font-stat-mono-sm text-stat-mono-sm ${char.isDuke ? 'text-tertiary' : 'text-outline'}">${levelStr}</span>
+          <span class="font-stat-mono-sm text-stat-mono-sm ${char.isDuke ? 'text-secondary font-bold' : 'text-outline'}">${hpStr}</span>
         </div>
       `;
 
       item.addEventListener('mouseenter', () => playSound('hover'));
       item.addEventListener('click', () => {
         if (selectedCharIndex !== index) {
-          playSound('character');
           selectedCharIndex = index;
           selectedAbilityIndex = 0;
+          playSound(char.isDuke ? 'character' : 'locked');
           updateView();
         }
       });
@@ -560,108 +529,300 @@ html[dir="rtl"] .font-body-sm {
     });
   }
 
-  function renderAbilities() {
-    abilityCardsContainer.innerHTML = '';
+  function renderVisualMatrix() {
+    const isDuke = selectedCharIndex === 0;
     const isFa = currentLang === 'fa';
+    const padNum = String(selectedCharIndex + 1).padStart(2, '0');
+    const displayNum = isFa ? toPersianDigits(padNum) : padNum;
 
-    [0, 1, 2].forEach((abIdx) => {
-      const isSelected = abIdx === selectedAbilityIndex;
-      const ability = getAbilityData(abIdx);
-      const isSpecial = ability.type === 'SPECIAL';
-
-      const card = document.createElement('button');
-      card.type = 'button';
-      card.className = `flex flex-col justify-between p-space-sm rounded text-left transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1) relative overflow-hidden smooth-pulse ${
-        isSpecial 
-          ? isSelected 
-            ? 'bg-secondary-container/40 shadow-[0_0_18px_rgba(204,0,60,0.45)] border border-secondary scale-[1.02]' 
-            : 'bg-surface-container-low hover:bg-surface-container border border-outline-variant/30'
-          : isSelected 
-            ? 'bg-surface-container-high shadow-[0_0_18px_rgba(242,202,80,0.35)] border border-primary scale-[1.02]' 
-            : 'bg-surface-container-low hover:bg-surface-container border border-outline-variant/30'
-      }`;
-
-      const slotStr = isFa 
-        ? `${i18n.fa.abilitySlotPrefix}${toPersianDigits(abIdx + 1)}` 
-        : `${i18n.en.abilitySlotPrefix}${abIdx + 1}`;
-
-      card.innerHTML = `
-        <div class="flex items-center justify-between w-full mb-space-xs">
-          <span class="w-6 h-6 rounded flex items-center justify-center font-stat-mono-sm text-stat-mono-sm transition-transform duration-300 ${
-            isSpecial 
-              ? 'bg-secondary-container text-on-secondary-container font-bold' 
-              : isSelected 
-                ? 'bg-primary text-on-primary font-bold' 
-                : 'bg-surface-container-lowest text-on-surface-variant'
-          }">${isFa ? '؟' : '?'}</span>
-          <span class="px-1.5 py-0.5 rounded font-label-caps text-label-caps ${
-            isSpecial 
-              ? 'bg-secondary-container text-secondary font-bold' 
-              : 'bg-surface-container-lowest text-on-surface-variant'
-          }">${ability.badge}</span>
+    if (isDuke) {
+      visualMatrixPanel.innerHTML = `
+        <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+        <div class="relative w-64 h-80 rounded flex items-center justify-center bg-surface-container shadow-2xl overflow-hidden smooth-pulse border border-primary/30 group">
+          <div class="absolute top-2 left-2 w-3 h-3 bg-primary/70 rounded-sm z-10 shadow-[0_0_6px_rgba(255,42,141,0.6)]"></div>
+          <div class="absolute top-2 right-2 w-3 h-3 bg-primary/70 rounded-sm z-10 shadow-[0_0_6px_rgba(255,42,141,0.6)]"></div>
+          <div class="absolute bottom-2 left-2 w-3 h-3 bg-primary/70 rounded-sm z-10 shadow-[0_0_6px_rgba(255,42,141,0.6)]"></div>
+          <div class="absolute bottom-2 right-2 w-3 h-3 bg-primary/70 rounded-sm z-10 shadow-[0_0_6px_rgba(255,42,141,0.6)]"></div>
+          <img alt="دوک بی چهره" class="w-full h-full object-cover object-top filter contrast-[1.05] brightness-95 group-hover:scale-105 group-hover:brightness-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDq8Colf0zdOyQOxkBnhVp-DM5w2PiKcOlfNFH_gKpyoq_d0CtVtsgPqLTePPFRpibRiDa0RBNt5dWVkOtS-aya3CBOOy5Vcapw4pBGs3jHNP1_7rFrIJfdJhPBjUGTtdZ8G7YUKasgUg_QpVT1TglCsrSRMs4OxQhJTxW3a4EOzMeUioVNDb3PPjlsNjjzvSMbvnIRlr2wYuW0vTL27aIe8gWCISUyJsP1Vwtce3eaaYWrucEvSM8TCQ"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80 pointer-events-none"></div>
+          <div class="absolute bottom-2.5 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md border border-primary/30 z-10 shadow-lg">
+            <span class="font-stat-mono-sm text-stat-mono-sm text-primary uppercase tracking-wider font-bold" id="matrix-char-tag">دوک بی چهره</span>
+          </div>
         </div>
-        <div class="flex flex-col mt-space-xs">
-          <span class="font-stat-mono-sm text-stat-mono-sm ${isSpecial ? 'text-secondary' : isSelected ? 'text-primary' : 'text-on-surface'} truncate">
-            ${ability.name}
-          </span>
-          <span class="font-body-sm text-body-sm text-outline mt-0.5">${slotStr}</span>
+        <div class="mt-space-lg text-center px-space-md">
+          <p class="font-body-sm text-body-sm text-primary tracking-wide uppercase transition-opacity duration-300 font-bold">
+            ${isFa ? i18n.fa.artworkNotice : i18n.en.artworkNotice}
+          </p>
+          <div class="mt-space-xs font-stat-mono-sm text-stat-mono-sm text-outline tracking-widest transition-opacity duration-300">
+            ${isFa ? i18n.fa.slotStandby : i18n.en.slotStandby}
+          </div>
         </div>
       `;
+      diagnosticStatusText.textContent = isFa ? i18n.fa.diagnostic : i18n.en.diagnostic;
+      diagnosticStatusText.className = "text-on-surface-variant font-stat-mono-sm text-stat-mono-sm";
+    } else {
+      // Locked holographic matrix view
+      visualMatrixPanel.innerHTML = `
+        <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-error/30 via-transparent to-transparent"></div>
+        <div class="absolute inset-0 scanline-grid opacity-30 pointer-events-none"></div>
+        
+        <div class="relative w-64 h-80 rounded flex flex-col items-center justify-center bg-surface-container-low/80 shadow-2xl overflow-hidden border border-dashed border-outline-variant/60 group">
+          <!-- Corner Tech Accents -->
+          <div class="absolute top-2 left-2 w-3 h-3 border-t-2 border-l-2 border-outline/50 z-10"></div>
+          <div class="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-outline/50 z-10"></div>
+          <div class="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-outline/50 z-10"></div>
+          <div class="absolute bottom-2 right-2 w-3 h-3 border-b-2 border-r-2 border-outline/50 z-10"></div>
 
-      card.addEventListener('mouseenter', () => playSound('hover'));
-      card.addEventListener('click', () => {
-        selectedAbilityIndex = abIdx;
-        playSound(isSpecial ? 'special' : 'ability');
-        updateAbilityTelemetry();
-        renderAbilities();
+          <!-- Pulsing Holographic Lock / Silhouette Graphic -->
+          <div class="relative flex flex-col items-center justify-center gap-3 animate-pulse">
+            <div class="w-24 h-24 rounded-full bg-surface-container-high/60 border border-outline-variant/50 flex items-center justify-center shadow-[0_0_30px_rgba(208,197,175,0.1)]">
+              <span class="material-symbols-outlined text-outline text-[48px] select-none">lock</span>
+            </div>
+            <div class="flex flex-col items-center gap-1">
+              <span class="font-stat-mono-sm text-stat-mono-sm text-primary tracking-widest font-bold uppercase">
+                ${isFa ? `جایگاه ${displayNum}` : `SLOT ${displayNum}`}
+              </span>
+              <span class="font-label-caps text-label-caps text-error tracking-widest uppercase">
+                RESTRICTED // LOCKED
+              </span>
+            </div>
+          </div>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90 pointer-events-none"></div>
+          
+          <div class="absolute bottom-2.5 px-space-sm py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-md border border-outline-variant/40 z-10 shadow-lg">
+            <span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase tracking-wider font-semibold">
+              ${isFa ? `پرونده طبقه بندی شده` : `CLASSIFIED ARCHIVE`}
+            </span>
+          </div>
+        </div>
+
+        <div class="mt-space-lg text-center px-space-md">
+          <p class="font-body-sm text-body-sm text-error tracking-wide uppercase transition-opacity duration-300 font-bold">
+            ${isFa ? `دسترسی غیرمجاز // پرونده رمزگذاری شده` : `CLASSIFIED ARCHIVE // RESTRICTED ACCESS`}
+          </p>
+          <div class="mt-space-xs font-stat-mono-sm text-stat-mono-sm text-outline tracking-widest transition-opacity duration-300">
+            ${isFa ? `جایگاه ${displayNum}: تخصیص نیافته // رمزنگاری فرکانسی` : `SLOT ${padNum}: UNALLOCATED // FREQUENCY ENCRYPTED`}
+          </div>
+        </div>
+      `;
+      diagnosticStatusText.textContent = isFa ? i18n.fa.diagnosticLocked : i18n.en.diagnosticLocked;
+      diagnosticStatusText.className = "text-error/80 font-stat-mono-sm text-stat-mono-sm";
+    }
+  }
+
+  function renderAbilities() {
+    abilityCardsContainer.innerHTML = '';
+    const isDuke = selectedCharIndex === 0;
+    const isFa = currentLang === 'fa';
+
+    if (isDuke) {
+      inspectHintLabel.textContent = isFa ? i18n.fa.selectToInspect : i18n.en.selectToInspect;
+
+      dukeAbilities.forEach((ability, abIdx) => {
+        const isSelected = abIdx === selectedAbilityIndex;
+        const isSpecial = ability.isSpecial;
+
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.setAttribute('aria-label', ability.name);
+        card.dataset.index = abIdx;
+
+        let borderClass = '';
+        if (isSelected) {
+          borderClass = isSpecial 
+            ? 'border-2 border-secondary shadow-[0_0_22px_rgba(255,179,182,0.5)] scale-[1.04] ring-2 ring-secondary/40 z-10' 
+            : 'border-2 border-primary shadow-[0_0_22px_rgba(255,42,141,0.55)] scale-[1.04] ring-2 ring-primary/40 z-10';
+        } else {
+          borderClass = isSpecial
+            ? 'border border-secondary-container/50 hover:border-secondary hover:shadow-[0_0_15px_rgba(204,0,60,0.35)] opacity-85 hover:opacity-100 hover:scale-[1.02]'
+            : 'border border-outline-variant/40 hover:border-primary/60 hover:shadow-[0_0_15px_rgba(255,42,141,0.3)] opacity-85 hover:opacity-100 hover:scale-[1.02]';
+        }
+
+        card.className = `relative w-full aspect-[3/4] rounded p-1 flex flex-col items-center justify-center overflow-hidden transition-all duration-300 smooth-pulse bg-surface-container-lowest group cursor-pointer ${borderClass}`;
+
+        const indicatorDot = isSpecial 
+          ? `<div class="absolute top-1.5 left-1.5 w-2.5 h-2.5 bg-secondary rounded-full shadow-[0_0_8px_rgba(255,179,182,0.9)] z-10"></div>`
+          : `<div class="absolute top-1.5 left-1.5 w-2.5 h-2.5 bg-primary rounded-full shadow-[0_0_8px_rgba(255,42,141,0.9)] z-10"></div>`;
+
+        const titleColor = isSelected 
+          ? (isSpecial ? 'text-secondary font-bold' : 'text-primary font-bold')
+          : 'text-on-surface font-medium';
+
+        card.innerHTML = `
+          <img src="${ability.img}" alt="${ability.name}" class="w-full h-full object-cover rounded transition-transform duration-300 group-hover:scale-105 group-hover:contrast-105" />
+          ${indicatorDot}
+          <div class="absolute bottom-1 inset-x-1 py-0.5 rounded bg-surface-container-lowest/90 backdrop-blur-sm border ${isSelected ? (isSpecial ? 'border-secondary/40' : 'border-primary/40') : 'border-outline-variant/40'} text-center shadow-lg">
+            <span class="font-stat-mono-sm text-stat-mono-sm ${titleColor} tracking-wider truncate block">${ability.name}</span>
+          </div>
+        `;
+
+        card.addEventListener('mouseenter', () => playSound('hover'));
+        card.addEventListener('click', () => {
+          if (selectedAbilityIndex !== abIdx) {
+            selectedAbilityIndex = abIdx;
+            playSound(isSpecial ? 'special' : 'ability');
+            updateAbilityTelemetry();
+            renderAbilities();
+          }
+        });
+
+        abilityCardsContainer.appendChild(card);
       });
+    } else {
+      // Locked Slots: 3 empty placeholder cards with mysterious rune/lock
+      inspectHintLabel.textContent = isFa ? "شکاف‌های قابلیت غیرفعال" : "SLOTS OFFLINE";
 
-      abilityCardsContainer.appendChild(card);
-    });
+      [1, 2, 3].forEach((slotNum) => {
+        const placeholder = document.createElement('div');
+        placeholder.className = "relative w-full aspect-[3/4] rounded p-2 flex flex-col items-center justify-center overflow-hidden border border-outline-variant/40 bg-surface-container-lowest/60 shadow-inner group";
+        placeholder.innerHTML = `
+          <div class="absolute inset-0 scanline-grid opacity-20 pointer-events-none"></div>
+          <div class="w-12 h-12 rounded-full border border-dashed border-outline-variant/70 flex items-center justify-center text-outline/60 group-hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[24px]">lock</span>
+          </div>
+          <div class="mt-2 text-center">
+            <span class="font-stat-mono-sm text-[11px] text-outline uppercase tracking-wider block">SLOT 0${slotNum}</span>
+            <span class="font-label-caps text-[9px] text-outline/60 uppercase">${isFa ? "ثبت نشده" : "UNBOUND"}</span>
+          </div>
+          <div class="absolute bottom-1 inset-x-1 py-0.5 rounded bg-surface-container-lowest/80 border border-outline-variant/20 text-center">
+            <span class="font-stat-mono-sm text-[11px] text-outline/80">-- / --</span>
+          </div>
+        `;
+        abilityCardsContainer.appendChild(placeholder);
+      });
+    }
   }
 
   function updateAbilityTelemetry() {
-    const ability = getAbilityData(selectedAbilityIndex);
-    const isSpecial = ability.type === 'SPECIAL';
+    const isFa = currentLang === 'fa';
+    const isDuke = selectedCharIndex === 0;
 
-    activeAbilityMeta.textContent = ability.meta;
-    activeAbilityMeta.className = `font-stat-mono-sm text-stat-mono-sm uppercase transition-colors duration-300 ${isSpecial ? 'text-secondary' : 'text-primary'}`;
-    
-    // Smooth cross-fade text transitions
-    activeAbilityTitle.style.opacity = '0.4';
-    activeAbilityDesc.style.opacity = '0.4';
-    setTimeout(() => {
-      activeAbilityTitle.textContent = ability.name;
-      activeAbilityDesc.textContent = ability.desc;
-      activeAbilityTitle.style.opacity = '1';
-      activeAbilityDesc.style.opacity = '1';
-    }, 100);
+    if (isDuke) {
+      const ability = dukeAbilities[selectedAbilityIndex];
+      const isSpecial = ability.isSpecial;
 
-    if (isSpecial) {
-      activeAbilityIndicator.className = 'w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(255,179,182,0.8)]';
+      activeAbilityMeta.textContent = isFa ? ability.badgeFa : ability.badge;
+      activeAbilityMeta.className = `font-stat-mono-sm text-stat-mono-sm uppercase transition-colors duration-300 ${isSpecial ? 'text-secondary font-bold' : 'text-primary font-bold'}`;
+      
+      activeAbilityTitle.style.opacity = '0.3';
+      activeAbilityDesc.style.opacity = '0.3';
+      setTimeout(() => {
+        activeAbilityTitle.textContent = ability.name;
+        activeAbilityDesc.textContent = ability.desc;
+        activeAbilityCost.textContent = ability.energyCost;
+        telemetryDamageVal.textContent = ability.damage;
+        telemetryDamageLabel.textContent = isFa ? "میزان آسیب سطح ۱:" : "LEVEL 1 DAMAGE:";
+        telemetryExtraBadge.innerHTML = `<span class="text-outline">${ability.extraKey}</span><span class="${isSpecial ? 'text-secondary font-bold' : 'text-primary font-medium'}">${ability.extraVal}</span>`;
+        
+        activeAbilityTitle.style.opacity = '1';
+        activeAbilityDesc.style.opacity = '1';
+      }, 80);
+
+      if (isSpecial) {
+        activeAbilityIndicator.className = 'w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(255,179,182,0.8)]';
+        activeAbilityCost.className = 'px-2 py-0.5 rounded bg-surface-container-lowest font-stat-mono-sm text-stat-mono-sm text-secondary border border-secondary/40';
+      } else {
+        activeAbilityIndicator.className = 'w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(255,42,141,0.8)]';
+        activeAbilityCost.className = 'px-2 py-0.5 rounded bg-surface-container-lowest font-stat-mono-sm text-stat-mono-sm text-primary border border-primary/30';
+      }
     } else {
-      activeAbilityIndicator.className = 'w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(242,202,80,0.8)]';
+      // Locked character telemetry offline
+      activeAbilityMeta.textContent = isFa ? "قابلیت متصل نشده // تله‌متری خاموش" : "NO ABILITY LINKED // TELEMETRY OFFLINE";
+      activeAbilityMeta.className = "font-stat-mono-sm text-stat-mono-sm uppercase text-outline font-semibold";
+
+      activeAbilityTitle.textContent = isFa ? "بدون اتصال قابلیت" : "OFFLINE INTERFACE";
+      activeAbilityDesc.textContent = isFa 
+        ? "هیچ قابلیت فعال یا تله‌متری رزمی برای این جایگاه مشخص نشده است. اطلاعات به صورت ایزوله نگهداری می‌شوند." 
+        : "No equipped abilities or combat telemetry recorded for this unit. Interface is currently in dormant sleep state.";
+      activeAbilityCost.textContent = isFa ? "⚡ هزینه انرژی: --" : "⚡ ENERGY: --";
+      activeAbilityIndicator.className = "w-2 h-2 rounded-full bg-outline/40 shadow-none";
+      activeAbilityCost.className = "px-2 py-0.5 rounded bg-surface-container-lowest font-stat-mono-sm text-stat-mono-sm text-outline border border-outline-variant/30";
+
+      telemetryDamageLabel.textContent = isFa ? "میزان آسیب:" : "DAMAGE METRIC:";
+      telemetryDamageVal.textContent = "-- / --";
+      telemetryExtraBadge.innerHTML = `<span class="text-outline">${isFa ? "وضعیت پیوند:" : "LINK STATUS:"}</span><span class="text-outline">${isFa ? "قطع ارتباط" : "DISCONNECTED"}</span>`;
     }
   }
 
   function updateView() {
     const isFa = currentLang === 'fa';
-    const charId = getCharId(selectedCharIndex);
-    const charName = isFa ? i18n.fa.charNamePlaceholder : i18n.en.charNamePlaceholder;
-    const charStory = isFa ? i18n.fa.storyPlaceholder : i18n.en.storyPlaceholder;
+    const isDuke = selectedCharIndex === 0;
+    const padNum = String(selectedCharIndex + 1).padStart(2, '0');
+    const displayNum = isFa ? toPersianDigits(padNum) : padNum;
 
+    const charId = getCharId(selectedCharIndex);
     previewSlotLabel.textContent = charId;
     charIdTag.textContent = charId;
-    charTitle.textContent = charName;
-    charLevelBadge.textContent = isFa ? `${i18n.fa.levelPrefix}${toPersianDigits('1')}` : `${i18n.en.levelPrefix}1`;
-    charHpBadge.textContent = isFa ? i18n.fa.hpPrefix : i18n.en.hpPrefix;
-    storyContent.textContent = charStory;
 
     rosterCountIndicator.textContent = isFa 
       ? `${toPersianDigits(String(selectedCharIndex + 1).padStart(2, '0'))} / ${toPersianDigits('12')}`
       : `${String(selectedCharIndex + 1).padStart(2, '0')} / 12`;
 
+    if (isDuke) {
+      // Identity panel - Duke restored
+      charAvatarContainer.innerHTML = `
+        <img alt="دوک بی چهره" class="w-full h-full object-cover object-[center_12%] scale-125" id="char-avatar-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-OQpF7LdS1E_QZvryq0VrDGhnupMh2-CnXXrM1pcYRM3K1vhbBRmyPJyW8_ICX83uOHqtjbBABiVX8W5rGrMtysYIpfvJmDMCVTKJtQoHF4zNx5IqjBzqc2H9cD7XqgxoLLDM8OmSXPkoNLqMAxgyZLHu5aOJyEh5nWx8X8zCvW_ZrNmMqraSaO7Av_Jut7KUm1PZICuA7lGny5CoT6XdA8IL1dIssCJno_1P_fUgxyxHL1tdbl4SHA"/>
+        <div class="absolute inset-0 border border-primary/20 pointer-events-none rounded"></div>
+      `;
+      charTitle.textContent = "دوک بی چهره";
+      charDesignationVal.textContent = isFa ? i18n.fa.designationValue : i18n.en.designationValue;
+      
+      charLevelBadgeWrap.className = "bg-tertiary-container/30 px-space-sm py-0.5 rounded flex items-center gap-space-xs shadow-[0_0_12px_rgba(51,202,144,0.3)] transition-all duration-300";
+      charLevelDot.className = "w-1.5 h-1.5 rounded-full bg-tertiary";
+      charLevelBadge.className = "font-stat-mono-sm text-stat-mono-sm text-tertiary font-bold tracking-wider";
+      charLevelBadge.textContent = isFa ? `${i18n.fa.levelPrefix}${toPersianDigits('1')}` : `${i18n.en.levelPrefix}1`;
+
+      charHpBadgeWrap.className = "bg-surface-container-lowest px-space-sm py-0.5 rounded flex items-center gap-space-xs border border-secondary/20 shadow-sm transition-all duration-300";
+      charHpIcon.className = "material-symbols-outlined text-secondary text-[16px]";
+      charHpBadge.className = "font-stat-mono-sm text-stat-mono-sm text-secondary font-bold tracking-wider";
+      charHpBadge.textContent = isFa ? `سلامت: ${toPersianDigits('560')}` : "HP: 560";
+
+      // Story
+      loreArchiveStatus.textContent = isFa ? i18n.fa.loreArchive : i18n.en.loreArchive;
+      storyContent.textContent = "دوک در دوران باستان زندگی می‌کرده، یک دستگاهی ساخته بود که می‌توانست واقعیت را دستکاری کند، اما دستگاه درست کار نکرد و یک تغییر بزرگ در جهان ایجاد کرد. این تغییر باعث شد نسل ومپایرها به وجود بیاید.";
+
+      // Mana 60%
+      manaStatusIcon.className = "material-symbols-outlined text-primary text-[16px]";
+      manaStatusText.textContent = isFa ? i18n.fa.manaLabel : i18n.en.manaLabel;
+      manaPercentageText.textContent = isFa ? toPersianDigits('60%') : '60%';
+      manaProgressBar.className = "h-full bg-gradient-to-r from-primary/50 via-primary to-primary-fixed w-[60%] rounded-full transition-all duration-500 shadow-[0_0_10px_rgba(255,42,141,0.5)]";
+    } else {
+      // Identity panel - Locked Slot
+      charAvatarContainer.innerHTML = `
+        <div class="w-full h-full bg-surface-container flex items-center justify-center text-outline">
+          <span class="material-symbols-outlined text-[32px]">lock</span>
+        </div>
+        <div class="absolute inset-0 border border-outline-variant/30 pointer-events-none rounded"></div>
+      `;
+      charTitle.textContent = isFa 
+        ? `جایگاه ${displayNum} - پرونده طبقه‌بندی شده (CLASSIFIED)` 
+        : `SLOT ${padNum} - CLASSIFIED ARCHIVE`;
+      charDesignationVal.textContent = isFa ? i18n.fa.designationLocked : i18n.en.designationLocked;
+
+      charLevelBadgeWrap.className = "bg-surface-container-lowest px-space-sm py-0.5 rounded flex items-center gap-space-xs border border-outline-variant/30 transition-all duration-300";
+      charLevelDot.className = "w-1.5 h-1.5 rounded-full bg-outline/40";
+      charLevelBadge.className = "font-stat-mono-sm text-stat-mono-sm text-outline font-medium tracking-wider";
+      charLevelBadge.textContent = "LV. --";
+
+      charHpBadgeWrap.className = "bg-surface-container-lowest px-space-sm py-0.5 rounded flex items-center gap-space-xs border border-outline-variant/30 transition-all duration-300";
+      charHpIcon.className = "material-symbols-outlined text-outline text-[16px]";
+      charHpBadge.className = "font-stat-mono-sm text-stat-mono-sm text-outline font-medium tracking-wider";
+      charHpBadge.textContent = "HP: ---";
+
+      // Story
+      loreArchiveStatus.textContent = isFa ? i18n.fa.loreArchiveLocked : i18n.en.loreArchiveLocked;
+      storyContent.textContent = "اطلاعات این موضوع بایگانی در دسترس نیست. برای رمزگشایی نیازمند ثبت داده و دستیابی به فرکانس فعال است. [CLASSIFIED_DATA_ENCRYPTED]";
+
+      // Mana 0%
+      manaStatusIcon.className = "material-symbols-outlined text-outline text-[16px]";
+      manaStatusText.textContent = isFa ? "مانا: ۰ از ۱۰۰" : "MANA: 0 / 100";
+      manaPercentageText.textContent = isFa ? toPersianDigits('0%') : '0%';
+      manaProgressBar.className = "h-full bg-outline-variant/40 w-[0%] rounded-full transition-all duration-500";
+    }
+
     renderRoster();
+    renderVisualMatrix();
     updateAbilityTelemetry();
     renderAbilities();
   }
@@ -692,4 +853,4 @@ html[dir="rtl"] .font-body-sm {
   // Initial View Setup
   updateView();
 })();
-</script></main><footer class="w-full bg-surface-container-lowest py-space-lg"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-1.5 h-1.5 rotate-45 bg-outline"></div><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" data-i18n="footerRights">© CODEX IMPERIUM. ALL RIGHTS RESERVED.</span></div><div class="flex items-center gap-space-md font-stat-mono-sm text-stat-mono-sm text-outline"><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerTerms">SANCTUM TERMS</span><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerLicense">LORE LICENSE</span><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerTelemetry">TELEMETRY FEED</span></div></div></footer></body></html>
+</script></main><footer class="w-full bg-surface-container-lowest py-space-lg"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-1.5 h-1.5 rotate-45 bg-primary shadow-[0_0_6px_rgba(255,42,141,0.6)]"></div><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" data-i18n="footerRights">© CODEX IMPERIUM. ALL RIGHTS RESERVED.</span></div><div class="flex items-center gap-space-md font-stat-mono-sm text-stat-mono-sm text-outline"><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerTerms">SANCTUM TERMS</span><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerLicense">LORE LICENSE</span><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerTelemetry">TELEMETRY FEED</span></div></div></footer></body></html>
