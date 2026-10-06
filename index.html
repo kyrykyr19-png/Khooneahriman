@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html class="dark" dir="ltr" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Geist:wght@100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;family=Vazirmatn:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base {
+  html, body { margin: 0; padding: 0; }
+  body { overscroll-behavior: none; }
+  main > :first-child { margin-top: 0 !important; }
+  main > :last-child { margin-bottom: 0 !important; }
+}
+::-webkit-scrollbar { display: none; }
+
+/* Smooth animations and Persian font bindings */
+.smooth-motion {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-pulse {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.smooth-pulse:hover {
+  transform: scale(1.015);
+}
+
+/* RTL and Persian Font overrides when active */
+html[dir="rtl"] {
+  font-family: 'Vazirmatn', 'Geist', sans-serif !important;
+}
+html[dir="rtl"] .font-headline-sm,
+html[dir="rtl"] .font-headline-md,
+html[dir="rtl"] .font-headline-lg,
+html[dir="rtl"] .font-display-hero,
+html[dir="rtl"] .font-display-hero-mobile {
+  font-family: 'Vazirmatn', serif !important;
+  font-weight: 700;
+}
+html[dir="rtl"] .font-stat-mono-sm,
+html[dir="rtl"] .font-stat-mono-lg,
+html[dir="rtl"] .font-label-caps {
+  font-family: 'Vazirmatn', 'JetBrains Mono', monospace !important;
+  letter-spacing: normal;
+}
+html[dir="rtl"] .font-body-md,
+html[dir="rtl"] .font-body-lg,
+html[dir="rtl"] .font-body-sm {
+  font-family: 'Vazirmatn', sans-serif !important;
+}
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#d0c5af", "primary": "#f2ca50", "surface-bright": "#3b3841", "error": "#ffb4ab", "on-error-container": "#ffdad6", "surface-container-low": "#1c1a23", "on-secondary": "#68001a", "surface-container-highest": "#36333c", "surface-container-lowest": "#0f0d15", "inverse-on-surface": "#322f38", "error-container": "#93000a", "surface-container-high": "#2b2931", "on-primary-container": "#554300", "inverse-surface": "#e6e0ec", "outline": "#99907c", "primary-fixed-dim": "#e9c349", "primary-container": "#d4af37", "on-primary": "#3c2f00", "primary-fixed": "#ffe088", "background": "#14121a", "on-tertiary-container": "#005035", "surface-tint": "#e9c349", "secondary-fixed": "#ffdada", "on-tertiary-fixed": "#002113", "secondary": "#ffb3b6", "on-secondary-container": "#ffdcdc", "secondary-container": "#cc003c", "on-tertiary-fixed-variant": "#005236", "inverse-primary": "#735c00", "on-error": "#690005", "tertiary-container": "#33ca90", "on-primary-fixed-variant": "#574500", "surface-dim": "#14121a", "on-background": "#e6e0ec", "surface": "#14121a", "tertiary-fixed": "#6ffbbe", "tertiary": "#58e7aa", "surface-container": "#211e27", "surface-variant": "#36333c", "on-primary-fixed": "#241a00", "on-tertiary": "#003824", "on-surface": "#e6e0ec", "outline-variant": "#4d4635", "on-secondary-fixed": "#40000c", "secondary-fixed-dim": "#ffb3b6", "tertiary-fixed-dim": "#4edea3", "on-secondary-fixed-variant": "#920028" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-sm": "1rem", "space-lg": "1.5rem", "margin": "2.5rem", "space-xs": "0.25rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-md": "1rem" }, "fontFamily": { "stat-mono-lg": [ "JetBrains Mono" ], "headline-md": [ "Bodoni Moda" ], "stat-mono-sm": [ "JetBrains Mono" ], "display-hero": [ "Bodoni Moda" ], "body-lg": [ "Geist" ], "headline-lg-mobile": [ "Bodoni Moda" ], "headline-sm": [ "Bodoni Moda" ], "headline-lg": [ "Bodoni Moda" ], "body-sm": [ "Geist" ], "display-hero-mobile": [ "Bodoni Moda" ], "body-md": [ "Geist" ], "label-caps": [ "JetBrains Mono" ], "vazir": [ "Vazirmatn", "sans-serif" ] }, "fontSize": { "stat-mono-lg": [ "20px", { "lineHeight": "24px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-md": [ "22px", { "lineHeight": "28px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "stat-mono-sm": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "500" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-lg-mobile": [ "26px", { "lineHeight": "32px", "letterSpacing": "0.04em", "fontWeight": "600" } ], "headline-sm": [ "18px", { "lineHeight": "24px", "letterSpacing": "0.03em", "fontWeight": "600" } ], "headline-lg": [ "32px", { "lineHeight": "40px", "letterSpacing": "0.05em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "display-hero-mobile": [ "36px", { "lineHeight": "44px", "letterSpacing": "0.06em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "label-caps": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_4px_24px_rgba(0,0,0,0.65)]"><div class="h-16 w-full px-margin flex items-center justify-between"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm"><div class="w-2 h-2 rotate-45 bg-primary shadow-[0_0_8px_rgba(242,202,80,0.8)]"></div><span class="font-headline-sm text-headline-sm uppercase text-primary tracking-widest" data-i18n="logoTitle">Game Database</span></div><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded"><div class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></div><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase tracking-wider" data-i18n="versionBadge">VER 2.0.4 // REALM ONLINE</span></div></div><nav class="flex items-center gap-space-xs" data-active-classes="bg-surface-container-high text-primary font-bold shadow-[0_0_12px_rgba(242,202,80,0.3)]"><a aria-current="page" class="px-space-md py-space-xs rounded uppercase transition-all bg-surface-container-high text-primary font-bold shadow-[0_0_12px_rgba(242,202,80,0.3)] smooth-motion" data-i18n="navCharacters" data-path="characters" href="#">Characters</a><a class="px-space-md py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all smooth-motion" data-i18n="navAbilities" data-path="abilities" href="#">Abilities</a><a class="px-space-md py-space-xs rounded font-label-caps text-label-caps uppercase text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all smooth-motion" data-i18n="navDatabase" data-path="database-compendium" href="#">Database</a></nav><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded"><span class="material-symbols-outlined text-primary text-[18px]">shield</span><span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant" data-i18n="latency">LATENCY: 24MS</span></div><!-- Sound Toggle Button --><button class="flex items-center gap-1.5 px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded font-stat-mono-sm text-stat-mono-sm text-on-surface-variant hover:text-primary transition-all smooth-motion border border-outline-variant/30" id="sound-toggle-btn" title="Toggle Sound"><span class="material-symbols-outlined text-primary text-[18px]" id="sound-icon">volume_up</span><span class="hidden sm:inline" id="sound-text">SOUND: ON</span></button><!-- Language Switcher Toggle --><button class="flex items-center gap-1 px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container rounded font-stat-mono-sm text-stat-mono-sm text-primary hover:text-primary-fixed border border-primary/30 shadow-[0_0_8px_rgba(242,202,80,0.15)] transition-all smooth-motion" id="lang-toggle-btn"><span class="material-symbols-outlined text-[16px]">translate</span><span class="font-bold" id="lang-label">فارسی | EN</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer transition-transform hover:scale-105"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<div class="w-full px-margin-sm md:px-margin py-space-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded shadow-2xl">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_stories</span>
+<span class="font-headline-sm text-headline-sm uppercase text-primary tracking-widest" data-i18n="archivesTitle">Compendium Archives</span>
+</div>
+<div class="h-4 w-[1px] bg-outline-variant"></div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" data-i18n="registryLabel">Registry:</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-primary uppercase" data-i18n="registryValue">12 SLOTS ALLOCATED</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-tertiary uppercase" data-i18n="stateLabel">STATE: PENDING INITIALIZATION</span>
+</div>
+<div class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant"><span data-i18n="sysRevLabel">SYS_REV:</span> <span class="text-on-surface" data-i18n="sysRevValue">EMPTY_TEMPLATE_V1</span></div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+<div class="lg:col-span-3 flex flex-col bg-surface-container-lowest rounded shadow-xl overflow-hidden">
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">groups</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest" data-i18n="rosterIndex">Roster Index</span>
+</div>
+<span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant" id="roster-count-indicator">01 / 12</span>
+</div>
+<div class="p-space-sm flex flex-col gap-space-xs max-h-[720px] overflow-y-auto selection:bg-transparent" id="character-roster">
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col bg-surface-container-lowest rounded shadow-2xl overflow-hidden relative min-h-[580px]">
+<div class="bg-surface-container-low px-space-md py-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">visibility</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface tracking-widest" data-i18n="visualMatrix">Visual Matrix</span>
+</div>
+<span class="font-stat-mono-sm text-stat-mono-sm text-primary transition-opacity duration-300" id="preview-slot-label">CHARACTER 01</span>
+</div>
+<div class="relative flex-1 flex flex-col items-center justify-center p-space-lg overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-surface-container-lowest" id="visual-matrix-panel">
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent"></div>
+<div class="relative w-64 h-80 rounded flex flex-col items-center justify-center bg-surface-container shadow-2xl overflow-hidden smooth-pulse">
+<div class="absolute top-2 left-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
+<div class="absolute top-2 right-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
+<div class="absolute bottom-2 left-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
+<div class="absolute bottom-2 right-2 w-3 h-3 bg-surface-container-high rounded-sm"></div>
+<div class="relative flex items-center justify-center w-36 h-36 rounded-full bg-surface-container-low shadow-[0_0_30px_rgba(242,202,80,0.15)] animate-pulse">
+<span class="font-display-hero text-display-hero text-primary select-none opacity-80">?</span>
+</div>
+<div class="mt-space-md flex flex-col items-center gap-space-xs px-space-sm">
+<div class="px-space-sm py-space-xs rounded bg-surface-container-lowest">
+<span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase tracking-wider" data-i18n="awaitingAsset">AWAITING ASSET</span>
+</div>
+</div>
+</div>
+<div class="mt-space-lg text-center px-space-md">
+<p class="font-body-sm text-body-sm text-on-surface-variant tracking-wide uppercase transition-opacity duration-300" data-i18n="artworkNotice">
+              Character artwork will be added later
+            </p>
+<div class="mt-space-xs font-stat-mono-sm text-stat-mono-sm text-outline tracking-widest transition-opacity duration-300" data-i18n="slotStandby">
+              SLOT: UNASSIGNED // PROJECTION STANDBY
+            </div>
+</div>
+</div>
+<div class="bg-surface-container-low px-space-md py-space-xs flex items-center justify-between text-on-surface-variant font-stat-mono-sm text-stat-mono-sm">
+<span data-i18n="frameRatio">FRAME RATIO: 4:5</span>
+<span data-i18n="diagnostic">DIAGNOSTIC: NORMAL</span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded p-space-md shadow-2xl flex flex-col gap-space-md relative overflow-hidden transition-all duration-300" id="detail-panel">
+<div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded smooth-motion">
+<div class="w-20 h-20 bg-surface-container-lowest rounded flex items-center justify-center shrink-0 shadow-inner">
+<span class="font-headline-lg text-headline-lg text-primary select-none">?</span>
+</div>
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex items-center justify-between flex-wrap gap-space-xs">
+<span class="font-stat-mono-sm text-stat-mono-sm text-primary uppercase tracking-widest transition-opacity duration-300" id="char-id-tag">CHARACTER 01</span>
+<div class="flex items-center gap-space-sm">
+<div class="bg-tertiary-container/30 px-space-sm py-0.5 rounded flex items-center gap-space-xs shadow-[0_0_12px_rgba(51,202,144,0.3)]">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-tertiary font-bold tracking-wider" id="char-level-badge">LV. 1</span>
+</div>
+<div class="bg-surface-container-lowest px-space-sm py-0.5 rounded flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-secondary font-bold tracking-wider" id="char-hp-badge">HP: ---</span>
+</div>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface uppercase tracking-wide transition-opacity duration-300" id="char-title">EMPTY CHARACTER</h2>
+<div class="flex items-center gap-space-xs mt-1">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest" data-i18n="designationLabel">DESIGNATION:</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-on-surface-variant uppercase" data-i18n="designationValue">ARCHIVE_PLACEHOLDER</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded smooth-motion">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">menu_book</span>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest" data-i18n="storyTitle">STORY</span>
+</div>
+<span class="font-stat-mono-sm text-stat-mono-sm text-outline" data-i18n="loreArchive">LORE ARCHIVE [NULL]</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pt-space-xs transition-opacity duration-300" id="story-content">
+              No character story has been added yet.
+            </p>
+</div>
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-md rounded smooth-motion">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">bolt</span>
+<span class="font-label-caps text-label-caps uppercase text-primary tracking-widest" data-i18n="telemetryTitle">ABILITY TELEMETRY</span>
+</div>
+<span class="font-stat-mono-sm text-stat-mono-sm uppercase transition-colors duration-300" id="active-ability-meta">ABILITY 1 // NORMAL</span>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(242,202,80,0.8)] transition-all duration-300" id="active-ability-indicator"></div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider transition-opacity duration-300" id="active-ability-title">[ ? ] ABILITY 1 - EMPTY</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed transition-opacity duration-300" id="active-ability-desc">
+                No ability description has been added yet.
+              </p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-outline tracking-widest" data-i18n="equippedAbilities">EQUIPPED ABILITIES (EXACTLY 3 SLOTS)</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-outline" data-i18n="selectToInspect">SELECT TO INSPECT</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm" id="ability-cards-container">
+</div>
+<!-- Mana Percentage Gauge Bar (Under the ability cards) -->
+<div class="mt-space-xs bg-surface-container-low p-space-sm rounded flex flex-col gap-1.5 border border-outline-variant/30 shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">water_drop</span>
+<span class="font-stat-mono-sm text-stat-mono-sm text-primary tracking-wider" id="mana-status-text">MANA: 0 / 100</span>
+</div>
+<span class="font-stat-mono-sm text-stat-mono-sm text-outline" id="mana-percentage-text">0%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden border border-outline-variant/40 relative">
+<div class="h-full bg-gradient-to-r from-primary/40 to-primary w-0 rounded-full transition-all duration-500 shadow-[0_0_8px_rgba(242,202,80,0.4)]" id="mana-progress-bar"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+(() => {
+  // Translations dictionary
+  const i18n = {
+    en: {
+      logoTitle: "Game Database",
+      versionBadge: "VER 2.0.4 // REALM ONLINE",
+      navCharacters: "Characters",
+      navAbilities: "Abilities",
+      navDatabase: "Database",
+      latency: "LATENCY: 24MS",
+      soundOn: "SOUND: ON",
+      soundOff: "SOUND: OFF",
+      archivesTitle: "Compendium Archives",
+      registryLabel: "Registry:",
+      registryValue: "12 SLOTS ALLOCATED",
+      stateLabel: "STATE: PENDING INITIALIZATION",
+      sysRevLabel: "SYS_REV:",
+      sysRevValue: "EMPTY_TEMPLATE_V1",
+      rosterIndex: "Roster Index",
+      visualMatrix: "Visual Matrix",
+      awaitingAsset: "AWAITING ASSET",
+      artworkNotice: "Character artwork will be added later",
+      slotStandby: "SLOT: UNASSIGNED // PROJECTION STANDBY",
+      frameRatio: "FRAME RATIO: 4:5",
+      diagnostic: "DIAGNOSTIC: NORMAL",
+      levelPrefix: "LV. ",
+      hpPrefix: "HP: ---",
+      designationLabel: "DESIGNATION:",
+      designationValue: "ARCHIVE_PLACEHOLDER",
+      storyTitle: "STORY",
+      loreArchive: "LORE ARCHIVE [NULL]",
+      storyPlaceholder: "No character story has been added yet.",
+      telemetryTitle: "ABILITY TELEMETRY",
+      equippedAbilities: "EQUIPPED ABILITIES (EXACTLY 3 SLOTS)",
+      selectToInspect: "SELECT TO INSPECT",
+      manaLabel: "MANA: 0 / 100",
+      charNamePlaceholder: "EMPTY CHARACTER",
+      charIdPrefix: "CHARACTER ",
+      abilitySlotPrefix: "SLOT 0",
+      badgeNormal: "NORMAL",
+      badgeSpecial: "SPECIAL",
+      ability1Title: "[ ? ] ABILITY 1 - EMPTY",
+      ability2Title: "[ ? ] ABILITY 2 - EMPTY",
+      abilitySpecialTitle: "[ ? ] SPECIAL - EMPTY",
+      abilityDescPlaceholder: "No ability description has been added yet.",
+      footerRights: "© CODEX IMPERIUM. ALL RIGHTS RESERVED.",
+      footerTerms: "SANCTUM TERMS",
+      footerLicense: "LORE LICENSE",
+      footerTelemetry: "TELEMETRY FEED"
+    },
+    fa: {
+      logoTitle: "پایگاه داده بازی",
+      versionBadge: "نسخه ۲.۰.۴ // رِلم آنلاین",
+      navCharacters: "شخصیت‌ها",
+      navAbilities: "قابلیت‌ها",
+      navDatabase: "پایگاه داده",
+      latency: "تأخیر: ۲۴ میلی‌ثانیه",
+      soundOn: "صدا: روشن",
+      soundOff: "صدا: خاموش",
+      archivesTitle: "بایگانی جامع",
+      registryLabel: "ثبت‌شده:",
+      registryValue: "۱۲ جایگاه اختصاص یافته",
+      stateLabel: "وضعیت: در انتظار مقداردهی اولیه",
+      sysRevLabel: "نسخه سیستم:",
+      sysRevValue: "الگوی_خالی_نسخه۱",
+      rosterIndex: "فهرست اعضا",
+      visualMatrix: "ماتریس بصری",
+      awaitingAsset: "در انتظار محتوا",
+      artworkNotice: "تصویر شخصیت بعداً افزوده خواهد شد",
+      slotStandby: "جایگاه: تخصیص‌نیافته // آماده‌باش بازتاب",
+      frameRatio: "نسبت کادر: ۴:۵",
+      diagnostic: "تشخیص: عادی",
+      levelPrefix: "سطح ",
+      hpPrefix: "سلامت: ---",
+      designationLabel: "شناسه:",
+      designationValue: "متغیر جایگزین بایگانی",
+      storyTitle: "داستان",
+      loreArchive: "بایگانی سرگذشت [تهی]",
+      storyPlaceholder: "هنوز هیچ داستانی برای این شخصیت ثبت نشده است.",
+      telemetryTitle: "داده‌سنجی قابلیت",
+      equippedAbilities: "قابلیت‌های مجهز شده (دقیقاً ۳ جایگاه)",
+      selectToInspect: "انتخاب جهت بررسی",
+      manaLabel: "مانا: ۰ از ۱۰۰",
+      charNamePlaceholder: "شخصیت خالی",
+      charIdPrefix: "شخصیت ",
+      abilitySlotPrefix: "جایگاه ۰",
+      badgeNormal: "عادی",
+      badgeSpecial: "ویژه",
+      ability1Title: "[ ؟ ] قابلیت ۱ - خالی",
+      ability2Title: "[ ؟ ] قابلیت ۲ - خالی",
+      abilitySpecialTitle: "[ ؟ ] قابلیت ویژه - خالی",
+      abilityDescPlaceholder: "هنوز هیچ توضیحی برای این قابلیت ثبت نشده است.",
+      footerRights: "کدکس ایمپریوم. تمامی حقوق محفوظ است.",
+      footerTerms: "قوانین سنکتوم",
+      footerLicense: "مجوز روایات",
+      footerTelemetry: "فید تله‌متری"
+    }
+  };
+
+  const toPersianDigits = (str) => {
+    const persianDigits = ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
+    return String(str).replace(/[0-9]/g, (w) => persianDigits[+w]);
+  };
+
+  let currentLang = 'en';
+  let soundEnabled = true;
+
+  // Pure Web Audio API Sound Synthesizer
+  let audioCtx = null;
+  function getAudioContext() {
+    if (!audioCtx) {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        audioCtx = new AudioContext();
+      }
+    }
+    if (audioCtx && audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    return audioCtx;
+  }
+
+  function playSound(type) {
+    if (!soundEnabled) return;
+    try {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const now = ctx.currentTime;
+      const masterGain = ctx.createGain();
+      masterGain.gain.setValueAtTime(0.09, now);
+      masterGain.connect(ctx.destination);
+
+      if (type === 'hover') {
+        // High soft blip
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(880, now);
+        osc.frequency.exponentialRampToValueAtTime(1100, now + 0.04);
+        gain.gain.setValueAtTime(0.03, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now);
+        osc.stop(now + 0.04);
+      } else if (type === 'character') {
+        // Low cyber chime chord
+        const osc1 = ctx.createOscillator();
+        const osc2 = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc1.type = 'triangle';
+        osc2.type = 'sine';
+        osc1.frequency.setValueAtTime(220, now);
+        osc1.frequency.exponentialRampToValueAtTime(440, now + 0.12);
+        osc2.frequency.setValueAtTime(330, now);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.14);
+        osc1.connect(gain);
+        osc2.connect(gain);
+        gain.connect(masterGain);
+        osc1.start(now);
+        osc2.start(now);
+        osc1.stop(now + 0.14);
+        osc2.stop(now + 0.14);
+      } else if (type === 'ability') {
+        // Tactile crisp feedback click
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(600, now);
+        osc.frequency.exponentialRampToValueAtTime(300, now + 0.06);
+        gain.gain.setValueAtTime(0.08, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.06);
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now);
+        osc.stop(now + 0.06);
+      } else if (type === 'special') {
+        // High harmonic special chime
+        const osc1 = ctx.createOscillator();
+        const osc2 = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc1.type = 'sawtooth';
+        osc2.type = 'sine';
+        osc1.frequency.setValueAtTime(523.25, now); // C5
+        osc1.frequency.exponentialRampToValueAtTime(1046.5, now + 0.18); // C6
+        osc2.frequency.setValueAtTime(783.99, now); // G5
+        gain.gain.setValueAtTime(0.06, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.2);
+        osc1.connect(gain);
+        osc2.connect(gain);
+        gain.connect(masterGain);
+        osc1.start(now);
+        osc2.start(now);
+        osc1.stop(now + 0.2);
+        osc2.stop(now + 0.2);
+      } else if (type === 'switch') {
+        // Subtle toggle click
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(500, now);
+        osc.frequency.exponentialRampToValueAtTime(800, now + 0.05);
+        gain.gain.setValueAtTime(0.07, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now);
+        osc.stop(now + 0.05);
+      }
+    } catch(e) {}
+  }
+
+  const characters = Array.from({ length: 12 }, (_, i) => {
+    const rawNum = String(i + 1).padStart(2, '0');
+    return {
+      index: i,
+      rawNum: rawNum,
+      level: 1
+    };
+  });
+
+  let selectedCharIndex = 0;
+  let selectedAbilityIndex = 0;
+
+  // DOM Elements
+  const rosterEl = document.getElementById('character-roster');
+  const previewSlotLabel = document.getElementById('preview-slot-label');
+  const charIdTag = document.getElementById('char-id-tag');
+  const charTitle = document.getElementById('char-title');
+  const charLevelBadge = document.getElementById('char-level-badge');
+  const charHpBadge = document.getElementById('char-hp-badge');
+  const storyContent = document.getElementById('story-content');
+  const activeAbilityMeta = document.getElementById('active-ability-meta');
+  const activeAbilityTitle = document.getElementById('active-ability-title');
+  const activeAbilityDesc = document.getElementById('active-ability-desc');
+  const activeAbilityIndicator = document.getElementById('active-ability-indicator');
+  const abilityCardsContainer = document.getElementById('ability-cards-container');
+  const manaStatusText = document.getElementById('mana-status-text');
+  const manaPercentageText = document.getElementById('mana-percentage-text');
+  const rosterCountIndicator = document.getElementById('roster-count-indicator');
+  const langToggleBtn = document.getElementById('lang-toggle-btn');
+  const soundToggleBtn = document.getElementById('sound-toggle-btn');
+  const soundIcon = document.getElementById('sound-icon');
+  const soundText = document.getElementById('sound-text');
+
+  function getCharId(index) {
+    const num = String(index + 1).padStart(2, '0');
+    if (currentLang === 'fa') {
+      return `${i18n.fa.charIdPrefix}${toPersianDigits(num)}`;
+    }
+    return `${i18n.en.charIdPrefix}${num}`;
+  }
+
+  function getAbilityData(abIdx) {
+    const isFa = currentLang === 'fa';
+    if (abIdx === 0) {
+      return {
+        type: 'NORMAL',
+        name: isFa ? i18n.fa.ability1Title : i18n.en.ability1Title,
+        badge: isFa ? i18n.fa.badgeNormal : i18n.en.badgeNormal,
+        meta: isFa ? "قابلیت ۱ // عادی" : "ABILITY 1 // NORMAL",
+        desc: isFa ? i18n.fa.abilityDescPlaceholder : i18n.en.abilityDescPlaceholder
+      };
+    } else if (abIdx === 1) {
+      return {
+        type: 'NORMAL',
+        name: isFa ? i18n.fa.ability2Title : i18n.en.ability2Title,
+        badge: isFa ? i18n.fa.badgeNormal : i18n.en.badgeNormal,
+        meta: isFa ? "قابلیت ۲ // عادی" : "ABILITY 2 // NORMAL",
+        desc: isFa ? i18n.fa.abilityDescPlaceholder : i18n.en.abilityDescPlaceholder
+      };
+    } else {
+      return {
+        type: 'SPECIAL',
+        name: isFa ? i18n.fa.abilitySpecialTitle : i18n.en.abilitySpecialTitle,
+        badge: isFa ? i18n.fa.badgeSpecial : i18n.en.badgeSpecial,
+        meta: isFa ? "قابلیت ۳ // ویژه" : "ABILITY 3 // SPECIAL",
+        desc: isFa ? i18n.fa.abilityDescPlaceholder : i18n.en.abilityDescPlaceholder
+      };
+    }
+  }
+
+  function applyLanguage(lang) {
+    currentLang = lang;
+    const isFa = lang === 'fa';
+    document.documentElement.setAttribute('dir', isFa ? 'rtl' : 'ltr');
+    document.documentElement.setAttribute('lang', isFa ? 'fa' : 'en');
+
+    // Update static i18n elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (i18n[lang] && i18n[lang][key]) {
+        el.textContent = i18n[lang][key];
+      }
+    });
+
+    // Sound button text update
+    soundText.textContent = soundEnabled ? (isFa ? i18n.fa.soundOn : i18n.en.soundOn) : (isFa ? i18n.fa.soundOff : i18n.en.soundOff);
+
+    // Update roster count indicator
+    rosterCountIndicator.textContent = isFa 
+      ? `${toPersianDigits(String(selectedCharIndex + 1).padStart(2, '0'))} / ${toPersianDigits('12')}`
+      : `${String(selectedCharIndex + 1).padStart(2, '0')} / 12`;
+
+    // Update Mana Text
+    manaStatusText.textContent = isFa ? i18n.fa.manaLabel : i18n.en.manaLabel;
+    manaPercentageText.textContent = isFa ? toPersianDigits('0%') : '0%';
+
+    updateView();
+  }
+
+  function renderRoster() {
+    rosterEl.innerHTML = '';
+    characters.forEach((char, index) => {
+      const isSelected = index === selectedCharIndex;
+      const isFa = currentLang === 'fa';
+      const item = document.createElement('button');
+      item.type = 'button';
+      item.className = `w-full flex items-center justify-between p-space-sm rounded transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1) text-left smooth-pulse ${
+        isSelected 
+          ? 'bg-surface-container-high shadow-[0_0_15px_rgba(242,202,80,0.25)] border border-primary/40' 
+          : 'bg-surface-container-low hover:bg-surface-container border border-transparent'
+      }`;
+
+      const charName = isFa ? i18n.fa.charNamePlaceholder : i18n.en.charNamePlaceholder;
+      const charId = getCharId(index);
+      const levelStr = isFa ? `${i18n.fa.levelPrefix}${toPersianDigits('1')}` : `${i18n.en.levelPrefix}1`;
+      const hpStr = isFa ? i18n.fa.hpPrefix : i18n.en.hpPrefix;
+
+      item.innerHTML = `
+        <div class="flex items-center gap-space-sm">
+          <div class="w-10 h-10 rounded flex items-center justify-center font-stat-mono-lg text-stat-mono-lg shrink-0 transition-transform duration-300 ${
+            isSelected ? 'bg-primary text-on-primary font-bold shadow-[0_0_10px_rgba(242,202,80,0.5)] scale-105' : 'bg-surface-container-lowest text-on-surface-variant'
+          }">?</div>
+          <div class="flex flex-col">
+            <span class="font-stat-mono-sm text-stat-mono-sm ${isSelected ? 'text-primary font-bold' : 'text-on-surface'}">${charId}</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-[120px]">${charName}</span>
+          </div>
+        </div>
+        <div class="flex flex-col items-end gap-0.5">
+          <span class="font-stat-mono-sm text-stat-mono-sm text-tertiary">${levelStr}</span>
+          <span class="font-stat-mono-sm text-stat-mono-sm text-secondary">${hpStr}</span>
+        </div>
+      `;
+
+      item.addEventListener('mouseenter', () => playSound('hover'));
+      item.addEventListener('click', () => {
+        if (selectedCharIndex !== index) {
+          playSound('character');
+          selectedCharIndex = index;
+          selectedAbilityIndex = 0;
+          updateView();
+        }
+      });
+
+      rosterEl.appendChild(item);
+    });
+  }
+
+  function renderAbilities() {
+    abilityCardsContainer.innerHTML = '';
+    const isFa = currentLang === 'fa';
+
+    [0, 1, 2].forEach((abIdx) => {
+      const isSelected = abIdx === selectedAbilityIndex;
+      const ability = getAbilityData(abIdx);
+      const isSpecial = ability.type === 'SPECIAL';
+
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = `flex flex-col justify-between p-space-sm rounded text-left transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1) relative overflow-hidden smooth-pulse ${
+        isSpecial 
+          ? isSelected 
+            ? 'bg-secondary-container/40 shadow-[0_0_18px_rgba(204,0,60,0.45)] border border-secondary scale-[1.02]' 
+            : 'bg-surface-container-low hover:bg-surface-container border border-outline-variant/30'
+          : isSelected 
+            ? 'bg-surface-container-high shadow-[0_0_18px_rgba(242,202,80,0.35)] border border-primary scale-[1.02]' 
+            : 'bg-surface-container-low hover:bg-surface-container border border-outline-variant/30'
+      }`;
+
+      const slotStr = isFa 
+        ? `${i18n.fa.abilitySlotPrefix}${toPersianDigits(abIdx + 1)}` 
+        : `${i18n.en.abilitySlotPrefix}${abIdx + 1}`;
+
+      card.innerHTML = `
+        <div class="flex items-center justify-between w-full mb-space-xs">
+          <span class="w-6 h-6 rounded flex items-center justify-center font-stat-mono-sm text-stat-mono-sm transition-transform duration-300 ${
+            isSpecial 
+              ? 'bg-secondary-container text-on-secondary-container font-bold' 
+              : isSelected 
+                ? 'bg-primary text-on-primary font-bold' 
+                : 'bg-surface-container-lowest text-on-surface-variant'
+          }">${isFa ? '؟' : '?'}</span>
+          <span class="px-1.5 py-0.5 rounded font-label-caps text-label-caps ${
+            isSpecial 
+              ? 'bg-secondary-container text-secondary font-bold' 
+              : 'bg-surface-container-lowest text-on-surface-variant'
+          }">${ability.badge}</span>
+        </div>
+        <div class="flex flex-col mt-space-xs">
+          <span class="font-stat-mono-sm text-stat-mono-sm ${isSpecial ? 'text-secondary' : isSelected ? 'text-primary' : 'text-on-surface'} truncate">
+            ${ability.name}
+          </span>
+          <span class="font-body-sm text-body-sm text-outline mt-0.5">${slotStr}</span>
+        </div>
+      `;
+
+      card.addEventListener('mouseenter', () => playSound('hover'));
+      card.addEventListener('click', () => {
+        selectedAbilityIndex = abIdx;
+        playSound(isSpecial ? 'special' : 'ability');
+        updateAbilityTelemetry();
+        renderAbilities();
+      });
+
+      abilityCardsContainer.appendChild(card);
+    });
+  }
+
+  function updateAbilityTelemetry() {
+    const ability = getAbilityData(selectedAbilityIndex);
+    const isSpecial = ability.type === 'SPECIAL';
+
+    activeAbilityMeta.textContent = ability.meta;
+    activeAbilityMeta.className = `font-stat-mono-sm text-stat-mono-sm uppercase transition-colors duration-300 ${isSpecial ? 'text-secondary' : 'text-primary'}`;
+    
+    // Smooth cross-fade text transitions
+    activeAbilityTitle.style.opacity = '0.4';
+    activeAbilityDesc.style.opacity = '0.4';
+    setTimeout(() => {
+      activeAbilityTitle.textContent = ability.name;
+      activeAbilityDesc.textContent = ability.desc;
+      activeAbilityTitle.style.opacity = '1';
+      activeAbilityDesc.style.opacity = '1';
+    }, 100);
+
+    if (isSpecial) {
+      activeAbilityIndicator.className = 'w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(255,179,182,0.8)]';
+    } else {
+      activeAbilityIndicator.className = 'w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(242,202,80,0.8)]';
+    }
+  }
+
+  function updateView() {
+    const isFa = currentLang === 'fa';
+    const charId = getCharId(selectedCharIndex);
+    const charName = isFa ? i18n.fa.charNamePlaceholder : i18n.en.charNamePlaceholder;
+    const charStory = isFa ? i18n.fa.storyPlaceholder : i18n.en.storyPlaceholder;
+
+    previewSlotLabel.textContent = charId;
+    charIdTag.textContent = charId;
+    charTitle.textContent = charName;
+    charLevelBadge.textContent = isFa ? `${i18n.fa.levelPrefix}${toPersianDigits('1')}` : `${i18n.en.levelPrefix}1`;
+    charHpBadge.textContent = isFa ? i18n.fa.hpPrefix : i18n.en.hpPrefix;
+    storyContent.textContent = charStory;
+
+    rosterCountIndicator.textContent = isFa 
+      ? `${toPersianDigits(String(selectedCharIndex + 1).padStart(2, '0'))} / ${toPersianDigits('12')}`
+      : `${String(selectedCharIndex + 1).padStart(2, '0')} / 12`;
+
+    renderRoster();
+    updateAbilityTelemetry();
+    renderAbilities();
+  }
+
+  // Toggle Language
+  langToggleBtn.addEventListener('click', () => {
+    playSound('switch');
+    const newLang = currentLang === 'en' ? 'fa' : 'en';
+    applyLanguage(newLang);
+  });
+
+  // Toggle Sound
+  soundToggleBtn.addEventListener('click', () => {
+    soundEnabled = !soundEnabled;
+    const isFa = currentLang === 'fa';
+    soundIcon.textContent = soundEnabled ? 'volume_up' : 'volume_off';
+    soundText.textContent = soundEnabled ? (isFa ? i18n.fa.soundOn : i18n.en.soundOn) : (isFa ? i18n.fa.soundOff : i18n.en.soundOff);
+    if (soundEnabled) {
+      playSound('switch');
+    }
+  });
+
+  // Nav link hover SFX
+  document.querySelectorAll('nav a, footer span').forEach(link => {
+    link.addEventListener('mouseenter', () => playSound('hover'));
+  });
+
+  // Initial View Setup
+  updateView();
+})();
+</script></main><footer class="w-full bg-surface-container-lowest py-space-lg"><div class="w-full px-margin flex flex-col md:flex-row items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-1.5 h-1.5 rotate-45 bg-outline"></div><span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest" data-i18n="footerRights">© CODEX IMPERIUM. ALL RIGHTS RESERVED.</span></div><div class="flex items-center gap-space-md font-stat-mono-sm text-stat-mono-sm text-outline"><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerTerms">SANCTUM TERMS</span><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerLicense">LORE LICENSE</span><span class="hover:text-primary transition-colors cursor-pointer" data-i18n="footerTelemetry">TELEMETRY FEED</span></div></div></footer></body></html>
